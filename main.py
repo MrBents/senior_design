@@ -7,7 +7,7 @@ from FE_branch import *
 class VideoProcessing():
     def __init__(self):
         self._fr = FacialRecognition()
-        self._fe = FacialExtraction()
+        self._fe = FeatureExtraction()
 
     def process_frame(self, frame):
         self._fr.parse_frame(frame)

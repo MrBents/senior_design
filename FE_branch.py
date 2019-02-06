@@ -1,7 +1,7 @@
 import numpy
 
 
-class FacialExtraction():
+class FeatureExtraction():
     def __init__(self):
         pass
 
