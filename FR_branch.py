@@ -5,6 +5,7 @@ class FacialRecognition():
     def __init__(self):
         self.gray = None
         self.total_face_num = 0
+        self.faces = None
         self.color_faces = []
 
     def parse_frame(self, frame):
@@ -23,10 +24,10 @@ class FacialRecognition():
         # Multiple cascades: https://github.com/Itseez/opencv/tree/master/data/haarcascades
         face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
         self.gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(self.gray, 1.3, 5)
-        for (x,y,w,h) in faces:
+        self.faces = face_cascade.detectMultiScale(self.gray, 1.3, 5)
+        for (x,y,w,h) in self.faces:
             roi_color_faces.append(frame[y:y+h, x:x+w])
-        self.total_face_num = len(faces)
+        self.total_face_num = len(self.faces)
         self.color_faces = roi_color_faces
         print("detected {} faces".format(self.total_face_num))
         return roi_color_faces
