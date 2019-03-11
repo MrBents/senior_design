@@ -7,6 +7,7 @@ class FacialRecognition():
         self.total_face_num = 0
         self.faces = None
         self.color_faces = []
+        self.faceID = []
 
     def parse_frame(self, frame):
         pass
@@ -31,6 +32,10 @@ class FacialRecognition():
         self.color_faces = roi_color_faces
         print("detected {} faces".format(self.total_face_num))
         return roi_color_faces
+
+    # TODO
+    def get_faceID(self):
+        return 0
             
         
 if __name__ == '__main__':
