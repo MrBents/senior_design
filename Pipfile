@@ -7,8 +7,11 @@ name = "pypi"
 requests = "*"
 numpy = "*"
 opencv-python = "*"
+urllib2 = "*"
+urllib3 = "*"
 
 [dev-packages]
+pylint = "<2.0.0"
 
 [requires]
 python_version = "3.6"
