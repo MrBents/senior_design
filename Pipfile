@@ -8,6 +8,7 @@ requests = "*"
 numpy = "*"
 opencv-python = "*"
 pillow = "*"
+pandas = "*"
 
 [dev-packages]
 
