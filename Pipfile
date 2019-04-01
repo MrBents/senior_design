@@ -9,6 +9,7 @@ numpy = "*"
 opencv-python = "*"
 pillow = "*"
 pandas = "*"
+matplotlib = "*"
 
 [dev-packages]
 

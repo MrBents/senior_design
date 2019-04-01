@@ -6,20 +6,25 @@ import tkinter
 import PIL 
 import PIL.Image, PIL.ImageTk, PIL.ImageDraw
 import Customer
+from Customer import CFA_Menu
+from Customer import Customer_Order
+from matplotlib import pyplot as plt
 
-#TODO Customer faceID check
-#
+# TODO Customer faceID check
+# TODO update the retrieval of the customer information
 
 class App:
-    def __init__(self, window, window_title, video_source=1, customers = None):
+    def __init__(self, window, window_title, video_source=1, customer = None):
         self.window = window
         self.window.title(window_title)
         self.video_source = video_source
         self.fr = fr.FacialRecognition()
-        # customer
-        self.customers_detected = customers
+
+        # Customer Info
+        self.customers_detected = customer
         self.customer_label_text = tkinter.StringVar()
         self.customer_label_text.set("customer_current_order")
+        # update
         self.customer_likelihood_text = [tkinter.StringVar() for i in range(10)]
         [self.customer_likelihood_text[i].set("customer_likelihoods") for i in range(10)]
  
@@ -67,17 +72,27 @@ class App:
                 del draw
 
                 #TODO Customer faceID check
-                #   and update the labels
-
-                # update customer current order label text
+                #   and update the customer, customer labels
+                # update customer label text
                 self.customer_label_text.set(str(self.customers_detected))
-                # update
-                for(i, item) in enumerate(self.customers_detected.current_orders.order_list):
-                    # update customer's chance of ordering an item
-                    # store it in temp tempVar
-                    tempVar = self.customers_detected.item_ordering_likelihood[i]
-                    tempStr = "".join(item + ":  " + str(tempVar))
-                    self.customer_likelihood_text[i].set(tempStr)
+
+                # # update all likelihoods
+                # for(i, item) in enumerate(self.customers_detected.item_ordering_likelihood):
+                #     # update customer's chance of ordering an item
+                #     # store it in temp tempVar
+                #     # tempVar = self.customers_detected.item_ordering_likelihood[i]
+                #     tempVar = item
+                #     food_name = menu[i]
+                #     tempStr = "".join(food_name + ":  " + str(tempVar))
+                #     self.customer_likelihood_text[i].set(tempStr)
+                index = self.customers_detected.get_top10_last10()
+                j = 0
+                for i in np.nditer(index):
+                    tempVar = self.customers_detected.item_amount[i]
+                    food_name = menu[i]
+                    tempStr = "".join(food_name + ":  " + str(tempVar))
+                    self.customer_likelihood_text[j].set(tempStr)
+                    j += 1
 
         if ret:
             self.photo = PIL.ImageTk.PhotoImage(image = img)
@@ -114,8 +129,37 @@ class MyVideoCapture:
             self.vid.release() 
 
 if __name__ == '__main__':
-    customer1 = Customer.Customer(current_order = {"Delux Sandwich": 3}, likelihoods = [0.5, 0.6, 0.4, 0.3, 0.7, 0.9, 0.3, 0.1, 0.4, 0.4], faceid = 0)
+    menu = CFA_Menu().order_list
+    order1 = Customer_Order(order = {"Deluxe Sandwich": 3}, menu=menu)
+    order2 = Customer_Order(order = {"Spicy Chicken Sandwich": 1}, menu=menu)
+    order3 = Customer_Order(order = {"Chicken Sandwich": 3}, menu=menu)
+    order4 = Customer_Order(order = {"Spicy Deluxe Sandwich": 3}, menu=menu)
+    order5 = Customer_Order(order = {"Grilled Chicken Sandwich": 1}, menu=menu)
+    order6 = Customer_Order(order = {"Grilled Chicken Club": 3}, menu=menu)
+    order7 = Customer_Order(order = {"Chick-n-Strips": 3}, menu=menu)
+    order8 = Customer_Order(order = {"Grilled Cool Wrap": 3}, menu=menu)
+    order9 = Customer_Order(order = {"Grilled Nuggets": 3}, menu=menu)
+    order10 = Customer_Order(order = {"Chicken Biscuit": 3}, menu=menu)
+    order11 = Customer_Order(order = {"DASANI Bottled Water": 3}, menu=menu)
+    orderList = []
+    orderList.append(order1)
+    orderList.append(order2)
+    orderList.append(order3)
+    orderList.append(order4)
+    orderList.append(order5)
+    orderList.append(order6)
+    orderList.append(order7)
+    orderList.append(order8)
+    orderList.append(order9)
+    orderList.append(order10)
+    orderList.append(order11)
+
+
+    customer1 = Customer.Customer(face_id = 0, all_past_orders= orderList, menu_length=len(menu))
+    customer2 = Customer.Customer(face_id = 1, all_past_orders= orderList, menu_length=len(menu))
+    # customer1 = Customer.Customer(current_order = {"Delux Sandwich": 3}, likelihoods = [0.5, 0.6, 0.4, 0.3, 0.7, 0.9, 0.3, 0.1, 0.4, 0.4], faceid = 0)
+
     # Create a window and pass it to the Application object
-    App(tkinter.Tk(), window_title = "Tkinter and OpenCV", customers=customer1)
+    App(tkinter.Tk(), window_title = "Tkinter and OpenCV", customer=customer1)
 
         
