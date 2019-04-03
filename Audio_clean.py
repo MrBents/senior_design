@@ -9,6 +9,7 @@ import json
 
 class Audio:
     
+    #get transcript of input
     @staticmethod
     def getTranscript():
         #set up AWS transcribe
@@ -46,16 +47,20 @@ class Audio:
         transcript = transcript[:index]
         return transcript
 
+    #process transcript
+    #returns dict() with order
     @staticmethod
     def getOrder(transcript):
         puctuation = {",", "."}
 
+        #return value
         order = {}
 
         number_order_list = ["number one", "====", "====", 
             "number two", "number five", "numbrer seven", "number three", 
             "number four", "number eight", "number six", "===="]
 
+        #potential input values searched by program stored in parellel arrays in reverse order of processing
         alternative_order_list = ["sandwich", "deluxe", "spicy chicken", 
             "====", "grilled chicken", "club", "nuggets", 
             "strips", "wrap", "grilled nuggets", "====", "minis", 
@@ -75,7 +80,7 @@ class Audio:
             "gallon beverages", "====", "unsweet tea",
             "====", "====", "====", "====",
             "====", "====", "===="]
-
+        #
         order_list = ["====", "====", "spicy chicken sandwich", 
             "spicy deluxe", "grilled chicken sandwich", "grilled chicken club", "chicken nuggets", 
             "chicken strips", "grilled cool wrap", "grilled chicken nuggets", "chicken biscuit", "chicken minis", 
@@ -95,7 +100,8 @@ class Audio:
             "gallon beverages", "diet lemonade", "iced tea unsweetened",
             "chick-fil-a sauce", "polynesian", "honey mustard", "ranch sauce",
             "buffalo", "barbeque", "sriracha"]
-
+        
+        #tag values to replace serched values
         orders = ["CHICKEN=SANDWICH", "DELUXE=SANDWICH", "SPICY=CHICKEN=SANDWICH", 
             "SPICY=DELUXE=SANDWICH", "GRILLED=CHICKEN=SANDWICH", "GRILLED=CHICKEN=CLUB", "NUGGETS", 
             "CHICK-N-STRIPS", "GRILLED=COOL=WRAP", "GRILLED=NUGGETS", "CHICKEN=BISCUIT", "CHICK-N-MINIS", 
@@ -116,6 +122,7 @@ class Audio:
             "CHICK-FIL-A=SAUCE", "POLYNESIAN=SAUCE", "HONEY=MUSTARD=SAUCE", "GARDEN=HERB=RANCH=SAUCE",
             "ZESTY=BUFFALO=SAUCE", "BARBEQUE=SAUCE", "SRIRACHA=SAUCE"] 
         
+        #output array
         order_output = ["Chicken Sandwich", "Deluxe Sandwich", "Spicy Chicken Sandwich", 
             "Spicy Deluxe Sandwich", "Grilled Chicken Sandwich", "Grilled Chicken Club", "Nuggets", 
             "Chick-n-Strips", "Grilled Cool Wrap", "Grilled Nuggets", "Chicken Biscuit", "Chick-n-Minis", 
@@ -136,12 +143,13 @@ class Audio:
             "Chick-fil-A Sauce", "Polynesian Sauce", "Honey Mustard Sauce", "Garden Herb Ranch Sauce",
             "Zesty Buffalo Sauce", "Barbeque Sauce", "Sriracha Sauce"]
 
+        #quantities array
         quantities = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
         QUANTITIES = ["ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN"]
 
+        #operators array
         operators = {"with", "without", "and", "no", "not", "meal"}
-        #for x in order_list:
-        #    orders.append(x.replace(' ','='))
+
         for y in range(len(order_list)):
             transcript = transcript.replace(order_list[y],orders[y])
         for y in range(len(alternative_order_list)):
@@ -180,19 +188,5 @@ class Audio:
 if __name__ == "__main__":
     # customerTest = Customer()
     #Audio.getOrder(Audio.getTranscript())
-    order = Audio.getOrder('Can I get five number two meal with a cookies and cream milkshake and a chicken biscuit please')
+    order = Audio.getOrder('Can I get three number two meal with four cookies and cream milkshake and a chicken biscuit please')
     print(order)
-"""
-    elif(word == "meal"):
-        order = order + '**'
-    elif(word == "with"):
-        order = order + '-'
-    elif(word == "without"):
-        order = order + '-/-'
-    elif(word == "no"):
-        order = order + '/-'
-    elif(word == "and"):
-        order = order + '    '
-    elif(word in operators):
-        order = order + '-' + word + '-'
-"""
