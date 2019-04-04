@@ -48,8 +48,11 @@ class Customer_Order():
         return ("".join(str(key) + ": " + str(value) for key, value in self.order.items()))
 
 class Customer():
-    def __init__(self, all_past_orders=[], face_id=None, menu_length=0):
+    def __init__(self, all_past_orders=[], face_id=None, menu_length=0, ethnicity=None, gender = None, age = None):
         self.face_id = face_id
+        self.ethnicity = ethnicity
+        self.age = age 
+        self.gender = gender
         self.info = pd.DataFrame(dtype=object)
         self.menu_length = menu_length
 
