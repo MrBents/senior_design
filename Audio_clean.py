@@ -4,49 +4,11 @@
 from __future__ import print_function
 import time
 import boto3
+from boto3.s3.transfer import S3Transfer
 import urllib
 import json
 
 class Audio:
-    
-    #get transcript of input
-    @staticmethod
-    def getTranscript():
-        #set up AWS transcribe
-        transcribe = boto3.client('transcribe',
-            region_name='us-east-2',
-            aws_secret_access_key ='key',
-            aws_access_key_id = 'id')
-        job_name = "Transcribe53"
-        job_uri = "https://s3.us-east-2.amazonaws.com/sound-joelmussell/Recording.mp3"
-
-        #start transcription
-        transcribe.start_transcription_job(
-            TranscriptionJobName=job_name,
-            Media={'MediaFileUri': job_uri},
-            MediaFormat='mp3',
-            LanguageCode='en-US'
-        )
-
-        #wait for AWS to respond
-        while True:
-            status = transcribe.get_transcription_job(TranscriptionJobName=job_name)
-            if status['TranscriptionJob']['TranscriptionJobStatus'] in ['COMPLETED', 'FAILED']:
-                break
-            print("Not ready yet...")
-            time.sleep(5)
-
-        #record transcribe output
-        text = transcribe.get_transcription_job(TranscriptionJobName=job_name)
-
-        #open json reults file  and extract information
-        jsonText = urllib.urlopen(text['TranscriptionJob']['Transcript']['TranscriptFileUri']).read()
-        index = jsonText.find('\"transcript\"') + 14
-        transcript = jsonText[index:]
-        index = transcript.find('\"')
-        transcript = transcript[:index]
-        return transcript
-
     #process transcript
     #returns dict() with order
     @staticmethod
@@ -187,6 +149,6 @@ class Audio:
 
 if __name__ == "__main__":
     # customerTest = Customer()
-    #Audio.getOrder(Audio.getTranscript())
-    order = Audio.getOrder('Can I get three number two meal with four cookies and cream milkshake and a chicken biscuit please')
+    #order = Audio.getOrder(Audio.getTranscript())
+    order = Audio.getOrder('Can I get three number two meal with five cookies and cream milkshake and a chicken biscuit please')
     print(order)
