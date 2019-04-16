@@ -1,0 +1,1001 @@
+age,gender,ethnic_origin,food,side,drink
+24,female,white,Chicken Sandwich,waffle fries,water
+39,female,asia,Chiken Nuggets 10pc,nothing,Milkshake
+21,female,asia,Chicken Sandwich,nothing,water
+29,male,asia,Chiken Nuggets 6pc,Fruit Cup,soda
+32,female,white,Chiken Nuggets 10pc,waffle fries,soda
+22,male,white,Spicy Chicken Sandwich,waffle fries,nothing
+37,female,white,Chicken Sandwich,Fruit Cup,tea
+24,male,asia,chicken tortilla soup,waffle fries,soda
+36,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+26,male,black,Chicken Sandwich,nothing,soda
+19,male,white,Grilled Chicken Sandwich,nothing,soda
+59,female,white,Grilled Chicken Sandwich,side salad,soda
+20,male,asia,Grilled Chicken Sandwich,waffle fries,Milkshake
+50,male,india,chicken noodle soup,waffle fries,soda
+26,male,india,Spicy Chicken Sandwich,superfood side,tea
+22,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+13,female,asia,Grilled Chicken Sandwich,waffle fries,lemonade
+26,female,white,Chicken Sandwich,waffle fries,Milkshake
+10,female,white,Salad Meal,waffle fries,Milkshake
+35,male,black,Chicken Sandwich,waffle fries,water
+79,male,black,chicken tortilla soup,waffle fries,Milkshake
+40,female,white,Spicy Chicken Sandwich,nothing,lemonade
+19,female,white,Chicken Sandwich,side salad,lemonade
+53,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+43,male,black,Chicken Sandwich,nothing,lemonade
+41,female,black,Grilled Chicken Sandwich,nothing,soda
+33,female,india,Grilled Chicken Sandwich,waffle fries,soda
+57,male,india,Grilled Chicken Sandwich,superfood side,water
+43,male,white,Salad Meal,nothing,soda
+34,female,white,Spicy Chicken Sandwich,waffle fries,nothing
+46,male,white,Spicy Chicken Sandwich,Hashbrowns,soda
+29,female,asia,Chicken Sandwich,Fruit Cup,tea
+69,male,white,Spicy Chicken Sandwich,nothing,nothing
+34,male,india,Grilled Chicken Sandwich,Fruit Cup,Milkshake
+24,male,black,Chicken Sandwich,side salad,nothing
+27,female,white,Grilled Chicken Sandwich,Hashbrowns,water
+24,male,white,Chiken Nuggets 10pc,Fruit Cup,soda
+25,male,white,Chiken Nuggets 6pc,waffle fries,nothing
+34,male,white,chicken tortilla soup,waffle fries,Milkshake
+34,male,india,chicken tortilla soup,Hashbrowns,Milkshake
+31,female,black,Spicy Chicken Sandwich,Hashbrowns,tea
+39,female,white,Chiken Nuggets 10pc,waffle fries,nothing
+24,male,white,Chicken Sandwich,nothing,water
+31,female,white,Chicken Sandwich,waffle fries,nothing
+27,male,india,Chicken Sandwich,Hashbrowns,Milkshake
+21,male,asia,chicken tortilla soup,waffle fries,lemonade
+20,male,india,Spicy Chicken Sandwich,superfood side,tea
+27,male,white,Chicken Sandwich,Hashbrowns,soda
+25,male,white,Spicy Chicken Sandwich,nothing,soda
+23,male,white,chicken noodle soup,nothing,tea
+23,male,white,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+57,female,white,Grilled Chicken Sandwich,side salad,water
+31,male,india,Spicy Deluxe Sandwich,Hashbrowns,water
+4,female,asia,Spicy Chicken Sandwich,Fruit Cup,soda
+18,male,white,Spicy Chicken Sandwich,waffle fries,water
+30,male,white,Chiken Nuggets 10pc,waffle fries,soda
+6,male,white,Chicken Sandwich,Hashbrowns,nothing
+34,male,white,Chiken Nuggets 10pc,Fruit Cup,tea
+15,female,white,Chicken Sandwich,Fruit Cup,water
+32,female,white,Spicy Chicken Sandwich,waffle fries,soda
+30,female,white,Grilled Chicken Sandwich,waffle fries,water
+9,male,white,Chiken Nuggets 6pc,waffle fries,water
+27,female,white,Grilled Chicken Sandwich,nothing,nothing
+23,male,white,Spicy Deluxe Sandwich,waffle fries,tea
+26,female,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+22,male,asia,Grilled Chicken Sandwich,Hashbrowns,soda
+32,female,white,Spicy Deluxe Sandwich,waffle fries,Milkshake
+29,male,asia,Chicken Sandwich,Hashbrowns,soda
+30,male,black,Chicken Sandwich,side salad,soda
+12,female,white,Chicken Sandwich,waffle fries,water
+29,female,asia,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+25,male,white,Chicken Sandwich,side salad,lemonade
+19,male,black,Chicken Sandwich,waffle fries,Milkshake
+39,male,asia,Grilled Chicken Sandwich,Hashbrowns,soda
+23,male,white,Spicy Chicken Sandwich,Hashbrowns,water
+30,male,white,Chicken Sandwich,Hashbrowns,water
+27,male,asia,Chiken Nuggets 6pc,Fruit Cup,water
+30,male,white,Chiken Nuggets 10pc,Hashbrowns,nothing
+20,male,white,Chicken Sandwich,Hashbrowns,soda
+3,male,black,Chiken Nuggets 6pc,nothing,nothing
+29,male,india,Chicken Sandwich,side salad,soda
+19,male,white,Chicken Sandwich,nothing,nothing
+27,male,black,Chicken Sandwich,Fruit Cup,water
+26,male,white,Spicy Chicken Sandwich,nothing,lemonade
+29,male,white,Spicy Chicken Sandwich,waffle fries,nothing
+25,female,asia,Grilled Chicken Sandwich,waffle fries,soda
+27,female,black,Spicy Chicken Sandwich,waffle fries,water
+20,female,white,Chicken Sandwich,Hashbrowns,tea
+64,male,white,Grilled Chicken Sandwich,nothing,soda
+23,female,white,Chicken Sandwich,side salad,soda
+25,male,white,Grilled Chicken Sandwich,Hashbrowns,soda
+35,female,white,Chicken Sandwich,waffle fries,soda
+23,male,asia,Salad Meal,waffle fries,tea
+34,female,white,Chiken Nuggets 10pc,nothing,Milkshake
+21,female,white,Spicy Chicken Sandwich,waffle fries,tea
+15,female,india,Chiken Nuggets 6pc,superfood side,soda
+34,male,white,Grilled Chicken Sandwich,nothing,soda
+22,male,black,chicken tortilla soup,superfood side,Milkshake
+34,male,white,Chicken Sandwich,side salad,soda
+35,female,white,Chicken Sandwich,waffle fries,soda
+33,male,white,Spicy Chicken Sandwich,superfood side,tea
+39,male,white,Grilled Chicken Sandwich,nothing,lemonade
+26,male,asia,Grilled Chicken Sandwich,Hashbrowns,nothing
+29,male,black,Spicy Chicken Sandwich,waffle fries,soda
+15,female,asia,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+29,female,white,Spicy Deluxe Sandwich,waffle fries,Milkshake
+37,female,india,Chiken Nuggets 6pc,Hashbrowns,tea
+29,female,black,Grilled Chicken Sandwich,waffle fries,Milkshake
+18,male,asia,Chiken Nuggets 10pc,waffle fries,lemonade
+27,female,india,Spicy Chicken Sandwich,waffle fries,lemonade
+18,female,white,Chiken Nuggets 6pc,waffle fries,lemonade
+26,male,white,Chiken Nuggets 10pc,side salad,Milkshake
+22,female,india,Salad Meal,nothing,water
+44,female,white,Chiken Nuggets 6pc,waffle fries,soda
+62,male,white,Salad Meal,nothing,soda
+27,female,white,Chicken Sandwich,Fruit Cup,soda
+22,female,white,Spicy Chicken Sandwich,waffle fries,soda
+98,male,black,Chicken Sandwich,waffle fries,water
+22,male,india,Chiken Nuggets 6pc,Hashbrowns,nothing
+44,male,white,Spicy Chicken Sandwich,superfood side,tea
+22,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+58,male,asia,Chicken Sandwich,nothing,Milkshake
+58,female,white,Chicken Sandwich,waffle fries,lemonade
+21,female,white,Chiken Nuggets 10pc,Hashbrowns,soda
+24,male,white,Chicken Sandwich,Hashbrowns,tea
+13,female,white,Spicy Chicken Sandwich,nothing,Milkshake
+33,female,white,Chicken Sandwich,waffle fries,lemonade
+22,male,black,Grilled Chicken Sandwich,waffle fries,tea
+43,female,white,Chicken Sandwich,nothing,soda
+24,female,asia,Chicken Sandwich,waffle fries,water
+25,male,black,Grilled Chicken Sandwich,Fruit Cup,tea
+43,male,white,Spicy Chicken Sandwich,Hashbrowns,soda
+12,male,india,Grilled Chicken Sandwich,waffle fries,Milkshake
+61,female,india,Grilled Chicken Sandwich,waffle fries,Milkshake
+26,female,black,Chicken Sandwich,Hashbrowns,Milkshake
+38,male,white,Chiken Nuggets 6pc,waffle fries,soda
+24,male,white,Grilled Chicken Sandwich,Hashbrowns,water
+29,male,white,Chiken Nuggets 10pc,side salad,Milkshake
+39,male,white,Chicken Sandwich,waffle fries,soda
+20,male,white,Chicken Sandwich,Hashbrowns,tea
+9,male,white,Spicy Chicken Sandwich,waffle fries,lemonade
+18,female,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+16,male,black,Spicy Chicken Sandwich,nothing,water
+32,male,white,Chicken Sandwich,Hashbrowns,soda
+38,male,white,Spicy Deluxe Sandwich,waffle fries,soda
+28,male,black,Spicy Chicken Sandwich,waffle fries,soda
+23,female,white,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+28,male,india,Spicy Chicken Sandwich,waffle fries,Milkshake
+27,male,india,Spicy Chicken Sandwich,waffle fries,lemonade
+26,male,white,chicken noodle soup,Hashbrowns,tea
+21,male,white,Spicy Chicken Sandwich,nothing,nothing
+23,male,white,Spicy Chicken Sandwich,nothing,soda
+52,male,india,chicken noodle soup,waffle fries,nothing
+38,female,white,Chicken Sandwich,waffle fries,soda
+37,male,white,Chiken Nuggets 6pc,waffle fries,nothing
+29,female,white,Chiken Nuggets 10pc,waffle fries,Milkshake
+18,male,black,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+30,male,asia,Chicken Sandwich,waffle fries,Milkshake
+10,male,white,Spicy Deluxe Sandwich,Hashbrowns,water
+64,male,asia,Grilled Chicken Sandwich,waffle fries,water
+22,female,asia,Chicken Sandwich,Hashbrowns,lemonade
+32,male,black,Spicy Chicken Sandwich,waffle fries,lemonade
+35,female,india,Chiken Nuggets 10pc,nothing,tea
+33,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+24,male,india,Chiken Nuggets 6pc,waffle fries,Milkshake
+46,female,white,chicken tortilla soup,superfood side,water
+33,male,black,Chicken Sandwich,waffle fries,nothing
+42,female,india,chicken tortilla soup,waffle fries,tea
+21,male,white,Chicken Sandwich,side salad,soda
+21,male,black,Grilled Chicken Sandwich,Fruit Cup,soda
+5,female,black,Grilled Chicken Sandwich,waffle fries,soda
+16,male,india,Chicken Sandwich,waffle fries,nothing
+32,female,white,Chiken Nuggets 6pc,waffle fries,soda
+32,male,white,Chiken Nuggets 10pc,waffle fries,water
+31,male,black,Chiken Nuggets 10pc,waffle fries,soda
+21,male,asia,Grilled Chicken Sandwich,waffle fries,soda
+25,male,white,Chiken Nuggets 10pc,waffle fries,soda
+17,female,white,Spicy Chicken Sandwich,waffle fries,water
+43,male,white,Salad Meal,waffle fries,nothing
+29,male,white,Grilled Chicken Sandwich,Fruit Cup,lemonade
+31,male,white,Spicy Chicken Sandwich,nothing,lemonade
+42,female,black,Spicy Chicken Sandwich,waffle fries,lemonade
+1,female,white,chicken tortilla soup,superfood side,tea
+32,male,white,Salad Meal,waffle fries,soda
+54,female,white,Grilled Chicken Sandwich,superfood side,tea
+38,male,white,Grilled Chicken Sandwich,Hashbrowns,tea
+25,male,asia,Grilled Chicken Sandwich,waffle fries,soda
+33,female,white,Spicy Deluxe Sandwich,Hashbrowns,lemonade
+32,male,white,Grilled Chicken Sandwich,waffle fries,water
+59,male,white,Chicken Sandwich,side salad,soda
+34,female,white,chicken noodle soup,superfood side,soda
+63,female,india,Grilled Chicken Sandwich,waffle fries,Milkshake
+31,male,white,Spicy Deluxe Sandwich,Fruit Cup,tea
+12,male,white,nothing,nothing,water
+27,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+21,male,black,Chiken Nuggets 10pc,side salad,Milkshake
+28,female,black,Chicken Sandwich,Hashbrowns,nothing
+25,male,white,Spicy Deluxe Sandwich,Fruit Cup,water
+43,female,white,Grilled Chicken Sandwich,side salad,nothing
+46,male,asia,Grilled Chicken Sandwich,Hashbrowns,soda
+32,female,black,Grilled Chicken Sandwich,nothing,tea
+27,male,white,Salad Meal,waffle fries,Milkshake
+33,female,black,Chicken Sandwich,waffle fries,nothing
+89,female,black,Grilled Chicken Sandwich,Fruit Cup,nothing
+32,male,white,nothing,nothing,nothing
+58,female,asia,chicken noodle soup,waffle fries,nothing
+23,male,white,Spicy Chicken Sandwich,Hashbrowns,nothing
+64,female,asia,chicken noodle soup,Hashbrowns,lemonade
+31,male,black,Spicy Chicken Sandwich,Hashbrowns,tea
+21,male,asia,Grilled Chicken Sandwich,waffle fries,lemonade
+31,male,india,Grilled Chicken Sandwich,Hashbrowns,nothing
+21,male,asia,chicken tortilla soup,waffle fries,soda
+37,male,black,Chicken Sandwich,waffle fries,soda
+38,male,white,Grilled Chicken Sandwich,Hashbrowns,nothing
+26,female,asia,Grilled Chicken Sandwich,Fruit Cup,water
+11,male,india,Chiken Nuggets 10pc,superfood side,soda
+87,male,black,Chicken Sandwich,waffle fries,Milkshake
+21,male,white,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+20,female,white,Spicy Deluxe Sandwich,waffle fries,Milkshake
+16,male,white,Grilled Chicken Sandwich,waffle fries,Milkshake
+20,male,india,chicken noodle soup,waffle fries,nothing
+15,male,india,Chiken Nuggets 6pc,superfood side,Milkshake
+20,male,black,chicken noodle soup,waffle fries,soda
+44,female,black,Chicken Sandwich,Hashbrowns,soda
+22,male,white,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+18,female,white,Chicken Sandwich,waffle fries,nothing
+36,female,black,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+61,female,india,chicken noodle soup,waffle fries,water
+40,female,white,Chicken Sandwich,Hashbrowns,soda
+50,male,black,Grilled Chicken Sandwich,waffle fries,Milkshake
+12,male,black,Chiken Nuggets 10pc,Hashbrowns,Milkshake
+22,female,white,Grilled Chicken Sandwich,waffle fries,soda
+31,female,black,Spicy Chicken Sandwich,nothing,Milkshake
+32,male,white,Spicy Chicken Sandwich,Fruit Cup,water
+15,male,black,Grilled Chicken Sandwich,nothing,Milkshake
+19,male,white,chicken noodle soup,nothing,nothing
+64,female,india,Grilled Chicken Sandwich,nothing,Milkshake
+21,male,white,Grilled Chicken Sandwich,superfood side,lemonade
+19,female,india,Chicken Sandwich,waffle fries,water
+20,male,white,Chiken Nuggets 6pc,Hashbrowns,Milkshake
+64,male,white,Spicy Deluxe Sandwich,Hashbrowns,tea
+24,male,india,Grilled Chicken Sandwich,Hashbrowns,lemonade
+32,male,white,Chicken Sandwich,Hashbrowns,tea
+24,male,white,Grilled Chicken Sandwich,waffle fries,water
+20,female,black,Chicken Sandwich,waffle fries,Milkshake
+22,male,black,Grilled Chicken Sandwich,waffle fries,nothing
+22,female,white,Grilled Chicken Sandwich,waffle fries,water
+28,male,india,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+24,male,white,Spicy Chicken Sandwich,waffle fries,water
+52,female,white,Chiken Nuggets 6pc,waffle fries,water
+34,female,india,chicken noodle soup,Hashbrowns,soda
+23,female,white,chicken tortilla soup,waffle fries,Milkshake
+27,female,white,Chicken Sandwich,waffle fries,water
+28,male,white,Grilled Chicken Sandwich,waffle fries,tea
+24,male,white,Grilled Chicken Sandwich,nothing,Milkshake
+16,male,india,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+42,male,white,Chicken Sandwich,waffle fries,water
+24,female,black,Grilled Chicken Sandwich,nothing,soda
+46,female,asia,Chiken Nuggets 10pc,side salad,tea
+29,female,black,Spicy Chicken Sandwich,waffle fries,Milkshake
+42,female,white,Spicy Chicken Sandwich,nothing,soda
+17,male,black,Spicy Chicken Sandwich,waffle fries,soda
+10,male,black,Chiken Nuggets 6pc,Hashbrowns,soda
+27,female,black,Grilled Chicken Sandwich,Hashbrowns,soda
+31,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+38,male,white,Spicy Chicken Sandwich,Fruit Cup,tea
+10,male,white,Chiken Nuggets 6pc,waffle fries,water
+15,male,black,Chiken Nuggets 6pc,waffle fries,Milkshake
+48,female,white,Grilled Chicken Sandwich,waffle fries,water
+20,male,asia,Chicken Sandwich,waffle fries,nothing
+32,male,black,Chicken Sandwich,superfood side,soda
+54,male,india,Chiken Nuggets 10pc,waffle fries,soda
+32,female,white,Chicken Sandwich,waffle fries,water
+90,female,white,Spicy Chicken Sandwich,Hashbrowns,lemonade
+22,male,white,Chiken Nuggets 6pc,waffle fries,Milkshake
+36,male,asia,chicken noodle soup,side salad,soda
+27,female,white,Spicy Chicken Sandwich,nothing,soda
+20,male,white,Chiken Nuggets 6pc,Hashbrowns,tea
+60,male,asia,Chiken Nuggets 6pc,waffle fries,tea
+17,female,black,Chiken Nuggets 6pc,nothing,soda
+18,male,white,Spicy Chicken Sandwich,Fruit Cup,Milkshake
+29,female,india,Grilled Chicken Sandwich,waffle fries,soda
+33,male,asia,chicken tortilla soup,waffle fries,water
+12,female,white,Chiken Nuggets 10pc,waffle fries,soda
+31,male,white,Grilled Chicken Sandwich,waffle fries,water
+30,female,white,Chiken Nuggets 10pc,waffle fries,water
+43,female,white,Chicken Sandwich,Fruit Cup,tea
+22,male,white,Spicy Deluxe Sandwich,nothing,Milkshake
+23,male,black,Spicy Chicken Sandwich,Hashbrowns,soda
+2,female,white,Spicy Chicken Sandwich,waffle fries,lemonade
+64,female,black,Chicken Sandwich,waffle fries,nothing
+23,male,black,Grilled Chicken Sandwich,waffle fries,soda
+22,male,asia,Grilled Chicken Sandwich,Hashbrowns,lemonade
+19,female,white,Chiken Nuggets 10pc,Hashbrowns,water
+50,male,asia,chicken tortilla soup,waffle fries,tea
+53,male,white,Spicy Chicken Sandwich,Hashbrowns,soda
+29,male,asia,Spicy Chicken Sandwich,nothing,water
+38,female,white,Grilled Chicken Sandwich,Hashbrowns,soda
+2,male,india,Grilled Chicken Sandwich,Hashbrowns,tea
+13,female,asia,Chicken Sandwich,nothing,Milkshake
+17,male,asia,Spicy Chicken Sandwich,Hashbrowns,tea
+30,male,black,Chiken Nuggets 6pc,waffle fries,soda
+50,female,black,Chicken Sandwich,nothing,soda
+23,male,asia,Chicken Sandwich,waffle fries,Milkshake
+22,female,white,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+20,female,white,Chicken Sandwich,Hashbrowns,Milkshake
+28,male,asia,Spicy Chicken Sandwich,nothing,soda
+23,male,white,Spicy Chicken Sandwich,nothing,soda
+19,male,black,Grilled Chicken Sandwich,Fruit Cup,lemonade
+10,male,asia,Grilled Chicken Sandwich,waffle fries,water
+18,female,india,Grilled Chicken Sandwich,Hashbrowns,water
+29,female,asia,Spicy Chicken Sandwich,superfood side,soda
+26,female,black,Spicy Chicken Sandwich,waffle fries,nothing
+31,female,white,Chiken Nuggets 10pc,waffle fries,soda
+32,male,white,Grilled Chicken Sandwich,Fruit Cup,Milkshake
+61,male,black,chicken noodle soup,waffle fries,nothing
+88,male,black,Chiken Nuggets 6pc,waffle fries,lemonade
+30,female,white,Chicken Sandwich,waffle fries,tea
+31,male,asia,chicken tortilla soup,Hashbrowns,lemonade
+27,female,asia,Grilled Chicken Sandwich,waffle fries,soda
+32,female,black,Spicy Chicken Sandwich,nothing,Milkshake
+40,female,white,Chiken Nuggets 10pc,waffle fries,lemonade
+35,female,india,Chicken Sandwich,side salad,nothing
+30,male,black,Chicken Sandwich,Hashbrowns,Milkshake
+36,male,india,Spicy Chicken Sandwich,waffle fries,tea
+25,male,india,Chicken Sandwich,nothing,water
+21,male,black,Salad Meal,Hashbrowns,soda
+46,female,white,Grilled Chicken Sandwich,Hashbrowns,water
+16,male,black,Chicken Sandwich,Fruit Cup,lemonade
+11,female,white,Spicy Chicken Sandwich,waffle fries,soda
+34,male,india,chicken noodle soup,waffle fries,nothing
+49,male,white,Grilled Chicken Sandwich,side salad,water
+36,male,india,Spicy Chicken Sandwich,waffle fries,tea
+15,male,white,Chiken Nuggets 10pc,Hashbrowns,lemonade
+16,male,white,Grilled Chicken Sandwich,waffle fries,lemonade
+47,male,india,Grilled Chicken Sandwich,side salad,water
+28,female,asia,Chicken Sandwich,side salad,soda
+31,male,asia,Grilled Chicken Sandwich,waffle fries,lemonade
+27,male,asia,Spicy Chicken Sandwich,superfood side,soda
+31,female,white,Grilled Chicken Sandwich,Hashbrowns,lemonade
+30,male,white,Chiken Nuggets 10pc,waffle fries,Milkshake
+34,male,black,Chicken Sandwich,Fruit Cup,soda
+28,male,black,Grilled Chicken Sandwich,Hashbrowns,soda
+29,male,white,Chicken Sandwich,Hashbrowns,lemonade
+22,male,white,Chiken Nuggets 10pc,superfood side,lemonade
+25,female,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+23,male,black,Grilled Chicken Sandwich,waffle fries,nothing
+33,female,white,Grilled Chicken Sandwich,Fruit Cup,Milkshake
+22,female,black,Chicken Sandwich,waffle fries,tea
+43,female,india,Spicy Deluxe Sandwich,nothing,soda
+22,male,india,Chicken Sandwich,nothing,soda
+20,male,white,Chicken Sandwich,Hashbrowns,lemonade
+41,male,white,Chiken Nuggets 6pc,Hashbrowns,lemonade
+44,female,white,Chiken Nuggets 10pc,waffle fries,soda
+26,male,india,Spicy Chicken Sandwich,nothing,water
+24,female,black,chicken noodle soup,nothing,Milkshake
+53,female,white,Spicy Chicken Sandwich,waffle fries,soda
+21,female,white,Grilled Chicken Sandwich,superfood side,nothing
+10,female,white,Spicy Chicken Sandwich,waffle fries,soda
+62,female,black,Spicy Chicken Sandwich,nothing,water
+31,male,white,Spicy Chicken Sandwich,waffle fries,tea
+42,male,white,Chiken Nuggets 10pc,Fruit Cup,Milkshake
+18,female,white,Chicken Sandwich,waffle fries,tea
+21,female,white,Grilled Chicken Sandwich,waffle fries,tea
+23,male,white,Chicken Sandwich,waffle fries,lemonade
+34,female,india,chicken noodle soup,waffle fries,Milkshake
+54,male,white,Spicy Chicken Sandwich,superfood side,water
+53,male,black,Chiken Nuggets 6pc,waffle fries,soda
+20,male,white,Spicy Chicken Sandwich,superfood side,tea
+44,female,white,Spicy Deluxe Sandwich,nothing,lemonade
+55,male,asia,Spicy Chicken Sandwich,side salad,soda
+20,female,india,Chiken Nuggets 10pc,Hashbrowns,soda
+33,female,white,Grilled Chicken Sandwich,waffle fries,tea
+28,male,india,Chicken Sandwich,Hashbrowns,tea
+35,male,white,Grilled Chicken Sandwich,Hashbrowns,soda
+31,male,white,chicken noodle soup,superfood side,soda
+26,female,white,Chiken Nuggets 10pc,waffle fries,Milkshake
+23,male,white,Spicy Chicken Sandwich,side salad,tea
+57,male,white,Grilled Chicken Sandwich,Fruit Cup,lemonade
+24,female,white,chicken tortilla soup,Hashbrowns,soda
+52,male,white,Grilled Chicken Sandwich,waffle fries,Milkshake
+32,male,black,Grilled Chicken Sandwich,waffle fries,water
+39,male,india,Spicy Chicken Sandwich,waffle fries,water
+23,female,asia,Spicy Chicken Sandwich,Hashbrowns,soda
+28,male,black,Chicken Sandwich,Fruit Cup,nothing
+23,male,black,Salad Meal,Hashbrowns,soda
+43,male,black,Spicy Chicken Sandwich,waffle fries,water
+7,female,white,Grilled Chicken Sandwich,Hashbrowns,water
+93,male,white,Spicy Chicken Sandwich,Hashbrowns,soda
+28,male,india,Grilled Chicken Sandwich,Hashbrowns,tea
+19,male,asia,Chiken Nuggets 10pc,waffle fries,nothing
+26,male,asia,Grilled Chicken Sandwich,waffle fries,Milkshake
+31,female,white,Spicy Chicken Sandwich,nothing,soda
+34,male,white,Chicken Sandwich,Fruit Cup,water
+60,male,india,Grilled Chicken Sandwich,waffle fries,nothing
+33,male,asia,Chicken Sandwich,waffle fries,soda
+24,male,white,chicken noodle soup,side salad,soda
+33,female,asia,Chicken Sandwich,nothing,water
+23,male,white,Chicken Sandwich,Fruit Cup,nothing
+12,male,white,Chicken Sandwich,Hashbrowns,Milkshake
+25,female,white,Chiken Nuggets 10pc,waffle fries,lemonade
+31,female,black,Chicken Sandwich,waffle fries,soda
+12,female,asia,Chicken Sandwich,nothing,soda
+10,male,white,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+20,female,black,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+34,male,black,Grilled Chicken Sandwich,Hashbrowns,water
+15,male,black,Salad Meal,nothing,lemonade
+30,male,black,Chicken Sandwich,Hashbrowns,water
+26,male,white,Grilled Chicken Sandwich,Hashbrowns,water
+48,female,white,Spicy Deluxe Sandwich,waffle fries,water
+46,male,india,Grilled Chicken Sandwich,Fruit Cup,tea
+8,male,black,Salad Meal,waffle fries,tea
+28,male,white,Chicken Sandwich,waffle fries,soda
+32,male,white,Chicken Sandwich,Hashbrowns,lemonade
+43,female,white,Salad Meal,Hashbrowns,water
+45,male,white,Chicken Sandwich,waffle fries,tea
+20,male,white,Spicy Chicken Sandwich,Fruit Cup,Milkshake
+54,female,india,chicken noodle soup,Fruit Cup,nothing
+44,male,white,Chicken Sandwich,waffle fries,soda
+24,male,white,Spicy Chicken Sandwich,Hashbrowns,tea
+29,male,white,Spicy Deluxe Sandwich,waffle fries,soda
+37,female,black,chicken noodle soup,Hashbrowns,nothing
+43,male,india,Chicken Sandwich,side salad,lemonade
+34,female,white,Spicy Chicken Sandwich,waffle fries,soda
+21,male,white,Grilled Chicken Sandwich,nothing,Milkshake
+30,female,white,Spicy Chicken Sandwich,nothing,soda
+93,female,white,Chicken Sandwich,Hashbrowns,soda
+12,female,white,Grilled Chicken Sandwich,waffle fries,soda
+59,male,white,Chicken Sandwich,Hashbrowns,water
+50,male,white,Grilled Chicken Sandwich,waffle fries,soda
+38,male,white,Chicken Sandwich,waffle fries,Milkshake
+44,female,india,Grilled Chicken Sandwich,waffle fries,soda
+41,male,black,Spicy Deluxe Sandwich,Fruit Cup,soda
+33,male,india,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+13,male,white,Chiken Nuggets 10pc,nothing,water
+26,female,white,Chicken Sandwich,nothing,Milkshake
+19,male,india,Salad Meal,waffle fries,water
+49,male,black,Spicy Chicken Sandwich,side salad,Milkshake
+60,female,white,Chiken Nuggets 10pc,Fruit Cup,soda
+26,female,india,Grilled Chicken Sandwich,waffle fries,lemonade
+27,female,white,Chiken Nuggets 6pc,waffle fries,Milkshake
+19,female,asia,Grilled Chicken Sandwich,waffle fries,soda
+24,female,asia,Spicy Chicken Sandwich,Hashbrowns,water
+7,female,white,Chicken Sandwich,superfood side,tea
+27,male,india,Grilled Chicken Sandwich,nothing,water
+31,male,white,Grilled Chicken Sandwich,Hashbrowns,soda
+50,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+20,male,asia,Spicy Chicken Sandwich,waffle fries,soda
+43,male,black,Grilled Chicken Sandwich,waffle fries,water
+20,male,asia,Spicy Chicken Sandwich,superfood side,Milkshake
+25,male,black,Chicken Sandwich,waffle fries,nothing
+18,male,black,Spicy Chicken Sandwich,waffle fries,water
+82,female,india,Chiken Nuggets 10pc,waffle fries,nothing
+28,male,black,Spicy Chicken Sandwich,superfood side,water
+0,female,asia,chicken tortilla soup,nothing,soda
+44,male,asia,Spicy Deluxe Sandwich,waffle fries,nothing
+33,male,black,Chicken Sandwich,superfood side,soda
+34,male,white,Chicken Sandwich,waffle fries,soda
+16,male,india,Chicken Sandwich,waffle fries,soda
+24,female,white,Grilled Chicken Sandwich,waffle fries,lemonade
+34,female,white,Spicy Chicken Sandwich,Hashbrowns,water
+13,male,white,Salad Meal,waffle fries,soda
+28,female,white,Chicken Sandwich,waffle fries,Milkshake
+24,male,black,Chicken Sandwich,superfood side,Milkshake
+31,male,black,Chicken Sandwich,nothing,water
+31,female,asia,Chicken Sandwich,Hashbrowns,water
+24,female,white,nothing,waffle fries,water
+28,male,india,Chicken Sandwich,waffle fries,Milkshake
+21,male,asia,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+20,female,white,Grilled Chicken Sandwich,waffle fries,soda
+35,male,white,Chiken Nuggets 10pc,waffle fries,nothing
+25,male,asia,Spicy Chicken Sandwich,superfood side,soda
+50,male,india,Grilled Chicken Sandwich,waffle fries,nothing
+59,male,india,Spicy Chicken Sandwich,Fruit Cup,nothing
+20,male,white,Spicy Deluxe Sandwich,waffle fries,water
+26,female,india,Chicken Sandwich,side salad,water
+12,male,white,Chicken Sandwich,waffle fries,soda
+32,female,white,Grilled Chicken Sandwich,waffle fries,Milkshake
+22,female,black,Chicken Sandwich,Hashbrowns,soda
+22,female,asia,Spicy Chicken Sandwich,waffle fries,soda
+28,male,white,Spicy Deluxe Sandwich,Fruit Cup,soda
+25,male,black,Chiken Nuggets 10pc,waffle fries,soda
+28,female,india,Chicken Sandwich,nothing,soda
+20,female,white,Chicken Sandwich,waffle fries,lemonade
+5,female,white,Grilled Chicken Sandwich,waffle fries,nothing
+30,male,white,Grilled Chicken Sandwich,waffle fries,soda
+57,male,white,Spicy Deluxe Sandwich,Hashbrowns,Milkshake
+17,male,asia,Chicken Sandwich,waffle fries,tea
+21,male,white,Grilled Chicken Sandwich,waffle fries,Milkshake
+42,male,asia,Spicy Chicken Sandwich,waffle fries,soda
+15,female,white,chicken noodle soup,Hashbrowns,water
+23,female,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+32,male,black,Chicken Sandwich,nothing,nothing
+24,male,black,Chicken Sandwich,Hashbrowns,Milkshake
+30,male,india,Spicy Chicken Sandwich,waffle fries,water
+36,female,white,Spicy Chicken Sandwich,superfood side,nothing
+56,male,white,chicken tortilla soup,Hashbrowns,tea
+34,male,india,Chicken Sandwich,waffle fries,water
+9,female,india,Spicy Chicken Sandwich,waffle fries,lemonade
+31,female,white,Spicy Chicken Sandwich,waffle fries,lemonade
+30,male,black,Grilled Chicken Sandwich,waffle fries,water
+58,female,asia,Spicy Chicken Sandwich,Hashbrowns,soda
+38,female,black,Spicy Chicken Sandwich,Hashbrowns,water
+27,female,white,Chiken Nuggets 10pc,Hashbrowns,nothing
+89,male,white,Chicken Sandwich,Hashbrowns,Milkshake
+21,male,asia,Chicken Sandwich,superfood side,Milkshake
+23,male,black,Spicy Chicken Sandwich,Hashbrowns,soda
+23,male,black,Spicy Chicken Sandwich,Hashbrowns,water
+14,female,black,Spicy Chicken Sandwich,waffle fries,water
+50,female,white,Chicken Sandwich,Hashbrowns,nothing
+7,female,white,Spicy Chicken Sandwich,waffle fries,soda
+33,male,white,Spicy Chicken Sandwich,Hashbrowns,lemonade
+31,female,white,Chiken Nuggets 10pc,waffle fries,Milkshake
+28,male,white,Spicy Chicken Sandwich,nothing,Milkshake
+25,female,white,Chiken Nuggets 6pc,waffle fries,nothing
+18,male,black,Chicken Sandwich,nothing,tea
+33,female,white,Grilled Chicken Sandwich,waffle fries,tea
+28,male,white,nothing,Hashbrowns,lemonade
+44,male,white,Grilled Chicken Sandwich,Hashbrowns,nothing
+33,male,white,Grilled Chicken Sandwich,side salad,lemonade
+26,female,black,chicken tortilla soup,Hashbrowns,lemonade
+46,female,white,nothing,nothing,Milkshake
+8,male,asia,Grilled Chicken Sandwich,Fruit Cup,tea
+27,male,black,Spicy Chicken Sandwich,superfood side,soda
+28,female,black,Grilled Chicken Sandwich,waffle fries,lemonade
+42,female,white,nothing,Fruit Cup,soda
+17,male,white,Chiken Nuggets 10pc,waffle fries,water
+22,male,white,Grilled Chicken Sandwich,Hashbrowns,nothing
+24,male,white,Chicken Sandwich,waffle fries,lemonade
+73,male,white,Grilled Chicken Sandwich,waffle fries,nothing
+32,female,white,chicken noodle soup,Hashbrowns,nothing
+43,male,india,Grilled Chicken Sandwich,waffle fries,water
+30,male,black,Chicken Sandwich,waffle fries,water
+86,female,white,Spicy Chicken Sandwich,waffle fries,water
+34,male,white,Chicken Sandwich,Hashbrowns,water
+20,female,white,Spicy Chicken Sandwich,waffle fries,water
+27,male,white,Grilled Chicken Sandwich,Hashbrowns,lemonade
+55,female,black,Salad Meal,Hashbrowns,water
+23,male,white,Grilled Chicken Sandwich,waffle fries,soda
+53,male,white,chicken noodle soup,Hashbrowns,nothing
+35,male,white,Spicy Chicken Sandwich,side salad,nothing
+44,female,white,Chiken Nuggets 10pc,Hashbrowns,water
+41,male,black,Grilled Chicken Sandwich,Hashbrowns,nothing
+34,male,india,Spicy Chicken Sandwich,nothing,water
+2,female,white,Chiken Nuggets 10pc,waffle fries,water
+5,female,white,Chicken Sandwich,waffle fries,soda
+44,male,white,Spicy Chicken Sandwich,waffle fries,nothing
+35,female,black,chicken tortilla soup,nothing,water
+25,female,white,Grilled Chicken Sandwich,Fruit Cup,soda
+23,male,white,Grilled Chicken Sandwich,waffle fries,lemonade
+54,male,white,Spicy Deluxe Sandwich,Hashbrowns,soda
+25,male,asia,Spicy Chicken Sandwich,Hashbrowns,soda
+16,male,white,Grilled Chicken Sandwich,side salad,water
+58,female,white,chicken noodle soup,Hashbrowns,soda
+72,female,white,Spicy Chicken Sandwich,Fruit Cup,water
+36,female,asia,Chicken Sandwich,Fruit Cup,lemonade
+21,male,white,Salad Meal,waffle fries,nothing
+28,female,asia,Chiken Nuggets 6pc,waffle fries,Milkshake
+25,male,white,Chiken Nuggets 10pc,waffle fries,water
+16,male,black,Grilled Chicken Sandwich,nothing,nothing
+83,male,white,Spicy Chicken Sandwich,Hashbrowns,soda
+7,male,white,Chiken Nuggets 10pc,Hashbrowns,tea
+42,male,black,Chicken Sandwich,waffle fries,lemonade
+30,male,asia,Grilled Chicken Sandwich,waffle fries,water
+23,female,black,Grilled Chicken Sandwich,Hashbrowns,soda
+21,male,white,Spicy Chicken Sandwich,waffle fries,nothing
+64,male,asia,Chiken Nuggets 6pc,Hashbrowns,lemonade
+30,male,white,Spicy Chicken Sandwich,waffle fries,water
+62,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+51,female,india,Grilled Chicken Sandwich,Hashbrowns,nothing
+31,male,white,Salad Meal,Hashbrowns,water
+27,male,white,Chiken Nuggets 6pc,waffle fries,lemonade
+59,male,white,Salad Meal,waffle fries,water
+33,male,white,Spicy Deluxe Sandwich,waffle fries,water
+22,male,india,Spicy Deluxe Sandwich,Fruit Cup,water
+33,female,white,Spicy Chicken Sandwich,side salad,Milkshake
+44,female,asia,chicken tortilla soup,waffle fries,lemonade
+22,male,white,Chicken Sandwich,nothing,water
+19,male,white,Spicy Deluxe Sandwich,Fruit Cup,soda
+29,male,black,Grilled Chicken Sandwich,Fruit Cup,lemonade
+19,female,india,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+53,male,white,Grilled Chicken Sandwich,waffle fries,nothing
+31,male,white,Spicy Chicken Sandwich,waffle fries,soda
+26,male,white,Chiken Nuggets 6pc,nothing,water
+26,female,white,Chiken Nuggets 10pc,Hashbrowns,lemonade
+20,female,white,Spicy Chicken Sandwich,nothing,Milkshake
+64,male,white,Grilled Chicken Sandwich,Hashbrowns,soda
+4,female,white,Chiken Nuggets 10pc,waffle fries,Milkshake
+40,female,india,Chiken Nuggets 6pc,waffle fries,soda
+40,male,asia,Chicken Sandwich,nothing,lemonade
+2,male,white,Grilled Chicken Sandwich,waffle fries,water
+91,male,white,Spicy Deluxe Sandwich,Hashbrowns,water
+28,female,india,Grilled Chicken Sandwich,side salad,tea
+29,female,india,Spicy Deluxe Sandwich,waffle fries,soda
+29,male,white,chicken noodle soup,waffle fries,tea
+21,male,black,Grilled Chicken Sandwich,waffle fries,soda
+54,male,asia,Spicy Chicken Sandwich,Hashbrowns,soda
+15,male,white,Chiken Nuggets 6pc,nothing,nothing
+28,female,black,Grilled Chicken Sandwich,waffle fries,soda
+26,male,asia,Spicy Chicken Sandwich,Fruit Cup,soda
+57,male,asia,chicken tortilla soup,nothing,tea
+27,female,white,Chiken Nuggets 10pc,waffle fries,soda
+28,male,white,Grilled Chicken Sandwich,waffle fries,Milkshake
+38,male,black,Grilled Chicken Sandwich,nothing,lemonade
+26,male,black,Spicy Chicken Sandwich,Fruit Cup,Milkshake
+25,male,white,Spicy Chicken Sandwich,Hashbrowns,lemonade
+32,male,white,Spicy Chicken Sandwich,Hashbrowns,lemonade
+30,male,white,Chiken Nuggets 10pc,waffle fries,water
+27,male,white,Chiken Nuggets 6pc,Hashbrowns,lemonade
+44,female,black,Chiken Nuggets 10pc,waffle fries,lemonade
+6,female,white,Chicken Sandwich,waffle fries,Milkshake
+38,male,asia,Grilled Chicken Sandwich,Hashbrowns,nothing
+25,female,white,Chicken Sandwich,waffle fries,Milkshake
+23,male,asia,Grilled Chicken Sandwich,Hashbrowns,soda
+19,female,asia,Chiken Nuggets 10pc,waffle fries,soda
+17,female,white,Spicy Chicken Sandwich,waffle fries,tea
+29,male,white,Chiken Nuggets 6pc,nothing,Milkshake
+30,male,white,Spicy Deluxe Sandwich,waffle fries,soda
+31,female,india,Chiken Nuggets 6pc,Hashbrowns,lemonade
+24,male,white,chicken tortilla soup,waffle fries,nothing
+27,female,asia,Spicy Chicken Sandwich,waffle fries,water
+39,male,india,Chiken Nuggets 6pc,waffle fries,Milkshake
+35,female,black,Grilled Chicken Sandwich,Fruit Cup,soda
+35,female,india,Grilled Chicken Sandwich,nothing,soda
+27,male,white,Spicy Chicken Sandwich,superfood side,water
+26,female,white,Spicy Chicken Sandwich,nothing,tea
+23,male,white,Chicken Sandwich,waffle fries,soda
+18,female,black,Salad Meal,nothing,water
+31,female,black,Chiken Nuggets 10pc,Fruit Cup,tea
+25,female,india,Grilled Chicken Sandwich,waffle fries,Milkshake
+37,male,india,Spicy Chicken Sandwich,side salad,nothing
+30,male,white,Chiken Nuggets 6pc,Hashbrowns,tea
+28,female,white,Chicken Sandwich,nothing,soda
+32,male,black,Chiken Nuggets 10pc,Hashbrowns,soda
+29,male,white,Spicy Chicken Sandwich,waffle fries,tea
+23,male,india,Chicken Sandwich,nothing,tea
+42,female,black,Chicken Sandwich,waffle fries,lemonade
+28,male,white,Chicken Sandwich,Hashbrowns,lemonade
+44,female,white,Spicy Deluxe Sandwich,Hashbrowns,water
+33,female,asia,Spicy Chicken Sandwich,nothing,Milkshake
+21,female,asia,Spicy Chicken Sandwich,waffle fries,tea
+23,female,black,Chicken Sandwich,waffle fries,tea
+26,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+54,male,asia,Chiken Nuggets 10pc,waffle fries,nothing
+33,female,black,Spicy Deluxe Sandwich,nothing,soda
+34,male,white,Chiken Nuggets 10pc,waffle fries,tea
+42,female,white,Spicy Chicken Sandwich,side salad,lemonade
+38,male,white,Chicken Sandwich,waffle fries,soda
+22,male,white,Spicy Chicken Sandwich,waffle fries,soda
+28,female,white,Spicy Chicken Sandwich,side salad,nothing
+18,female,asia,Chicken Sandwich,waffle fries,tea
+21,female,white,Chicken Sandwich,nothing,soda
+22,male,black,Grilled Chicken Sandwich,waffle fries,nothing
+37,female,black,Chiken Nuggets 10pc,nothing,lemonade
+31,female,black,Spicy Chicken Sandwich,waffle fries,water
+0,male,asia,Chicken Sandwich,Fruit Cup,lemonade
+20,male,black,Chicken Sandwich,waffle fries,lemonade
+30,female,white,Grilled Chicken Sandwich,nothing,tea
+31,female,white,Spicy Chicken Sandwich,Hashbrowns,water
+33,female,white,Chiken Nuggets 10pc,waffle fries,water
+31,male,india,Grilled Chicken Sandwich,waffle fries,water
+24,male,india,Grilled Chicken Sandwich,waffle fries,Milkshake
+21,male,black,Chiken Nuggets 6pc,side salad,tea
+27,female,white,Grilled Chicken Sandwich,side salad,soda
+21,male,white,Spicy Deluxe Sandwich,nothing,soda
+29,female,asia,Chicken Sandwich,waffle fries,soda
+26,male,black,Chicken Sandwich,waffle fries,soda
+21,male,india,Chicken Sandwich,waffle fries,nothing
+50,male,white,Grilled Chicken Sandwich,waffle fries,water
+45,female,white,Spicy Chicken Sandwich,Hashbrowns,nothing
+21,female,white,Spicy Deluxe Sandwich,Hashbrowns,lemonade
+88,male,white,Grilled Chicken Sandwich,waffle fries,soda
+30,female,asia,Grilled Chicken Sandwich,waffle fries,tea
+37,female,black,Chiken Nuggets 6pc,waffle fries,water
+7,male,white,Spicy Chicken Sandwich,waffle fries,tea
+26,male,white,Grilled Chicken Sandwich,nothing,Milkshake
+32,male,black,Spicy Chicken Sandwich,nothing,soda
+24,female,white,Salad Meal,Hashbrowns,lemonade
+22,female,white,Chiken Nuggets 10pc,waffle fries,lemonade
+32,female,india,Chicken Sandwich,Hashbrowns,soda
+24,male,black,Chicken Sandwich,nothing,Milkshake
+63,male,white,Chicken Sandwich,waffle fries,tea
+36,male,white,chicken tortilla soup,waffle fries,soda
+15,male,white,chicken tortilla soup,waffle fries,water
+21,female,white,Chiken Nuggets 10pc,nothing,soda
+12,female,black,Grilled Chicken Sandwich,waffle fries,soda
+32,male,black,chicken noodle soup,superfood side,Milkshake
+62,female,white,Spicy Chicken Sandwich,waffle fries,soda
+38,male,white,Grilled Chicken Sandwich,Hashbrowns,water
+48,female,black,chicken noodle soup,nothing,soda
+48,female,white,Chiken Nuggets 6pc,Hashbrowns,tea
+37,female,black,Grilled Chicken Sandwich,waffle fries,water
+22,male,white,Spicy Chicken Sandwich,superfood side,soda
+15,male,black,Grilled Chicken Sandwich,Hashbrowns,soda
+45,male,india,Chicken Sandwich,Hashbrowns,tea
+33,male,white,chicken tortilla soup,superfood side,tea
+36,female,black,Spicy Chicken Sandwich,Hashbrowns,lemonade
+25,male,india,Chicken Sandwich,waffle fries,lemonade
+24,female,black,Chicken Sandwich,waffle fries,Milkshake
+31,female,white,Chiken Nuggets 6pc,superfood side,Milkshake
+22,female,asia,Chiken Nuggets 6pc,Hashbrowns,soda
+27,male,asia,nothing,Hashbrowns,lemonade
+27,male,white,Grilled Chicken Sandwich,Hashbrowns,nothing
+11,male,white,chicken tortilla soup,waffle fries,Milkshake
+30,male,white,Grilled Chicken Sandwich,side salad,soda
+99,female,black,Grilled Chicken Sandwich,waffle fries,tea
+38,male,white,Spicy Chicken Sandwich,nothing,soda
+57,male,india,Spicy Chicken Sandwich,nothing,nothing
+29,male,white,Spicy Chicken Sandwich,waffle fries,soda
+15,female,white,Spicy Chicken Sandwich,Hashbrowns,lemonade
+46,male,black,Chicken Sandwich,superfood side,lemonade
+34,male,white,Chicken Sandwich,Hashbrowns,Milkshake
+29,female,black,Chicken Sandwich,waffle fries,Milkshake
+24,male,white,Chicken Sandwich,waffle fries,lemonade
+24,male,white,Spicy Chicken Sandwich,waffle fries,water
+25,female,white,Spicy Deluxe Sandwich,waffle fries,water
+20,male,white,Spicy Chicken Sandwich,Hashbrowns,lemonade
+30,male,black,Grilled Chicken Sandwich,Hashbrowns,nothing
+24,female,black,Chicken Sandwich,nothing,water
+24,male,black,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+7,female,white,Grilled Chicken Sandwich,Hashbrowns,soda
+39,male,white,Spicy Deluxe Sandwich,superfood side,water
+29,male,black,chicken noodle soup,nothing,tea
+31,female,white,Chicken Sandwich,Hashbrowns,soda
+30,male,white,Chiken Nuggets 6pc,waffle fries,water
+21,male,white,Chicken Sandwich,Hashbrowns,Milkshake
+17,male,black,Chiken Nuggets 10pc,Fruit Cup,water
+21,male,india,Spicy Chicken Sandwich,waffle fries,soda
+34,male,white,Chicken Sandwich,Fruit Cup,Milkshake
+58,male,white,Spicy Chicken Sandwich,Hashbrowns,water
+81,male,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+43,female,black,Spicy Chicken Sandwich,Fruit Cup,Milkshake
+20,male,white,Chiken Nuggets 6pc,side salad,soda
+28,male,asia,Chicken Sandwich,waffle fries,nothing
+39,female,asia,Spicy Chicken Sandwich,waffle fries,soda
+20,male,black,Spicy Chicken Sandwich,waffle fries,tea
+27,male,black,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+15,male,black,Spicy Chicken Sandwich,waffle fries,water
+82,female,white,Spicy Chicken Sandwich,waffle fries,Milkshake
+8,male,india,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+21,male,black,Chicken Sandwich,waffle fries,nothing
+1,male,black,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+24,male,white,Chicken Sandwich,superfood side,Milkshake
+14,male,white,Chiken Nuggets 6pc,nothing,soda
+53,male,black,Salad Meal,superfood side,Milkshake
+30,male,white,Chiken Nuggets 6pc,nothing,water
+27,male,asia,Chicken Sandwich,waffle fries,soda
+25,female,india,Grilled Chicken Sandwich,waffle fries,soda
+33,female,asia,Spicy Chicken Sandwich,side salad,tea
+22,male,white,Spicy Deluxe Sandwich,waffle fries,tea
+22,female,white,Chicken Sandwich,waffle fries,soda
+49,female,black,nothing,side salad,Milkshake
+42,male,black,Chicken Sandwich,waffle fries,nothing
+1,male,black,Chicken Sandwich,Hashbrowns,lemonade
+55,male,black,Spicy Chicken Sandwich,Hashbrowns,tea
+53,male,white,Chiken Nuggets 10pc,waffle fries,soda
+40,male,black,Spicy Deluxe Sandwich,side salad,soda
+29,female,white,Spicy Chicken Sandwich,nothing,tea
+25,male,white,Chicken Sandwich,nothing,tea
+59,male,white,Chicken Sandwich,Hashbrowns,Milkshake
+43,male,black,Salad Meal,nothing,Milkshake
+10,female,white,Chicken Sandwich,waffle fries,tea
+36,male,white,Chicken Sandwich,superfood side,Milkshake
+19,female,black,Chiken Nuggets 6pc,waffle fries,water
+43,female,asia,chicken tortilla soup,waffle fries,nothing
+40,male,white,Spicy Deluxe Sandwich,waffle fries,Milkshake
+28,male,black,Chiken Nuggets 10pc,waffle fries,Milkshake
+34,female,black,Chicken Sandwich,waffle fries,tea
+32,female,white,Grilled Chicken Sandwich,nothing,water
+30,female,black,Spicy Chicken Sandwich,waffle fries,tea
+33,male,black,chicken tortilla soup,Hashbrowns,soda
+24,female,white,Grilled Chicken Sandwich,waffle fries,water
+33,male,black,chicken tortilla soup,Hashbrowns,water
+31,female,india,nothing,waffle fries,Milkshake
+15,female,asia,Chiken Nuggets 6pc,waffle fries,water
+22,female,black,Chiken Nuggets 10pc,Hashbrowns,Milkshake
+23,male,asia,chicken noodle soup,waffle fries,water
+28,male,asia,Chiken Nuggets 6pc,Hashbrowns,Milkshake
+21,male,asia,Chicken Sandwich,nothing,lemonade
+42,female,asia,nothing,Fruit Cup,soda
+20,female,asia,chicken noodle soup,Hashbrowns,Milkshake
+52,male,asia,Chiken Nuggets 6pc,waffle fries,soda
+25,male,white,Chiken Nuggets 6pc,nothing,soda
+33,male,black,Chicken Sandwich,side salad,soda
+26,male,asia,Chicken Sandwich,nothing,nothing
+26,female,black,Grilled Chicken Sandwich,side salad,soda
+27,male,white,Grilled Chicken Sandwich,Hashbrowns,tea
+13,male,black,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+28,male,white,Chiken Nuggets 6pc,Hashbrowns,water
+34,male,white,Spicy Chicken Sandwich,Fruit Cup,soda
+12,male,black,Spicy Chicken Sandwich,nothing,water
+42,male,black,chicken noodle soup,waffle fries,Milkshake
+25,female,black,Chiken Nuggets 10pc,Hashbrowns,water
+31,female,black,Spicy Deluxe Sandwich,side salad,Milkshake
+25,female,white,Chiken Nuggets 6pc,Hashbrowns,Milkshake
+32,female,asia,Chiken Nuggets 6pc,nothing,water
+23,male,asia,Grilled Chicken Sandwich,Hashbrowns,water
+36,female,asia,Chiken Nuggets 6pc,side salad,Milkshake
+13,male,white,Grilled Chicken Sandwich,waffle fries,lemonade
+20,male,black,Chicken Sandwich,nothing,soda
+20,male,black,Grilled Chicken Sandwich,Hashbrowns,nothing
+40,female,asia,Spicy Deluxe Sandwich,waffle fries,lemonade
+30,female,black,chicken noodle soup,Hashbrowns,Milkshake
+23,male,asia,Chiken Nuggets 6pc,side salad,water
+56,male,black,Spicy Chicken Sandwich,waffle fries,nothing
+20,male,black,Grilled Chicken Sandwich,waffle fries,lemonade
+33,male,white,Chicken Sandwich,Hashbrowns,Milkshake
+30,male,asia,Spicy Deluxe Sandwich,superfood side,tea
+32,male,white,Chiken Nuggets 6pc,waffle fries,nothing
+28,male,white,Chiken Nuggets 6pc,Hashbrowns,soda
+16,male,white,Chicken Sandwich,waffle fries,tea
+29,female,black,Spicy Deluxe Sandwich,waffle fries,tea
+33,female,black,Spicy Deluxe Sandwich,waffle fries,soda
+34,male,india,Chiken Nuggets 6pc,Fruit Cup,tea
+25,female,white,chicken noodle soup,Hashbrowns,nothing
+26,female,white,Spicy Chicken Sandwich,waffle fries,soda
+34,male,white,Chicken Sandwich,Fruit Cup,nothing
+64,female,white,Spicy Chicken Sandwich,side salad,soda
+41,female,white,Grilled Chicken Sandwich,side salad,soda
+21,male,india,Grilled Chicken Sandwich,side salad,soda
+25,male,india,Grilled Chicken Sandwich,Hashbrowns,soda
+21,female,white,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+13,male,india,Grilled Chicken Sandwich,Hashbrowns,water
+16,male,black,Chiken Nuggets 6pc,waffle fries,Milkshake
+26,female,white,Spicy Chicken Sandwich,Hashbrowns,lemonade
+41,female,white,Spicy Chicken Sandwich,nothing,soda
+21,male,asia,Chicken Sandwich,waffle fries,water
+63,female,white,Grilled Chicken Sandwich,waffle fries,water
+34,female,asia,Spicy Deluxe Sandwich,nothing,Milkshake
+24,male,black,Grilled Chicken Sandwich,side salad,soda
+42,male,black,Chiken Nuggets 10pc,side salad,Milkshake
+21,female,india,Salad Meal,waffle fries,water
+32,male,asia,Spicy Chicken Sandwich,waffle fries,water
+31,male,india,Chiken Nuggets 6pc,superfood side,Milkshake
+53,female,india,Spicy Chicken Sandwich,waffle fries,Milkshake
+20,male,india,Chicken Sandwich,Hashbrowns,tea
+33,male,black,Spicy Chicken Sandwich,waffle fries,water
+10,female,black,Grilled Chicken Sandwich,waffle fries,tea
+32,female,white,Chiken Nuggets 6pc,side salad,Milkshake
+20,female,black,Spicy Chicken Sandwich,waffle fries,nothing
+39,female,white,Grilled Chicken Sandwich,waffle fries,Milkshake
+18,male,white,Grilled Chicken Sandwich,nothing,Milkshake
+23,male,black,Spicy Chicken Sandwich,nothing,tea
+58,male,white,Chicken Sandwich,nothing,Milkshake
+39,male,asia,Chicken Sandwich,waffle fries,soda
+57,male,asia,Grilled Chicken Sandwich,waffle fries,nothing
+3,male,white,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+57,female,white,chicken noodle soup,superfood side,tea
+17,female,white,Chiken Nuggets 6pc,nothing,Milkshake
+7,female,black,Grilled Chicken Sandwich,waffle fries,soda
+49,male,white,Grilled Chicken Sandwich,waffle fries,soda
+12,male,india,Grilled Chicken Sandwich,Hashbrowns,soda
+13,male,white,Chicken Sandwich,nothing,Milkshake
+26,female,white,Spicy Chicken Sandwich,nothing,soda
+29,male,white,Chicken Sandwich,waffle fries,lemonade
+6,female,india,Chicken Sandwich,Hashbrowns,soda
+54,female,asia,Grilled Chicken Sandwich,waffle fries,nothing
+16,female,white,Salad Meal,Fruit Cup,soda
+55,female,asia,Spicy Deluxe Sandwich,waffle fries,lemonade
+24,male,white,Grilled Chicken Sandwich,waffle fries,water
+32,female,asia,Chicken Sandwich,superfood side,lemonade
+28,male,black,Chicken Sandwich,Fruit Cup,Milkshake
+51,male,white,Spicy Chicken Sandwich,nothing,soda
+61,male,black,Chiken Nuggets 10pc,waffle fries,Milkshake
+33,male,white,Spicy Chicken Sandwich,waffle fries,water
+29,female,white,chicken tortilla soup,Hashbrowns,tea
+25,female,white,chicken noodle soup,waffle fries,water
+23,female,black,Spicy Chicken Sandwich,waffle fries,tea
+23,male,black,Chicken Sandwich,side salad,Milkshake
+48,female,india,Spicy Chicken Sandwich,waffle fries,water
+35,male,asia,Chiken Nuggets 6pc,Hashbrowns,soda
+29,female,india,chicken noodle soup,side salad,lemonade
+38,female,black,Chicken Sandwich,waffle fries,lemonade
+39,female,black,Chicken Sandwich,waffle fries,soda
+31,male,asia,Grilled Chicken Sandwich,nothing,water
+17,female,white,Grilled Chicken Sandwich,waffle fries,lemonade
+37,male,white,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+79,female,black,Chiken Nuggets 10pc,side salad,water
+45,female,black,Chiken Nuggets 10pc,Hashbrowns,tea
+30,male,black,Grilled Chicken Sandwich,waffle fries,Milkshake
+28,male,white,Chicken Sandwich,Hashbrowns,water
+24,female,india,Chiken Nuggets 6pc,side salad,lemonade
+10,female,white,Spicy Chicken Sandwich,waffle fries,lemonade
+38,female,asia,Chiken Nuggets 10pc,Hashbrowns,lemonade
+34,female,black,Spicy Chicken Sandwich,waffle fries,water
+20,female,white,Salad Meal,waffle fries,Milkshake
+11,female,asia,Spicy Chicken Sandwich,waffle fries,soda
+4,male,black,Chiken Nuggets 10pc,side salad,water
+31,male,asia,Grilled Chicken Sandwich,waffle fries,water
+32,male,black,Grilled Chicken Sandwich,Hashbrowns,nothing
+24,male,white,Salad Meal,waffle fries,lemonade
+42,male,india,Chicken Sandwich,Hashbrowns,nothing
+51,male,asia,Chiken Nuggets 10pc,Hashbrowns,Milkshake
+35,female,white,Chiken Nuggets 6pc,waffle fries,soda
+24,female,white,Chicken Sandwich,nothing,soda
+30,male,asia,Spicy Chicken Sandwich,waffle fries,tea
+25,female,asia,Grilled Chicken Sandwich,Hashbrowns,tea
+28,male,white,Chicken Sandwich,Fruit Cup,tea
+26,female,india,Spicy Chicken Sandwich,Hashbrowns,soda
+30,female,white,Grilled Chicken Sandwich,waffle fries,soda
+43,male,white,Chiken Nuggets 10pc,waffle fries,Milkshake
+42,female,black,Chiken Nuggets 10pc,nothing,nothing
+42,female,white,Grilled Chicken Sandwich,nothing,tea
+9,male,white,Spicy Chicken Sandwich,Fruit Cup,water
+5,male,white,Grilled Chicken Sandwich,Fruit Cup,lemonade
+13,female,india,Chicken Sandwich,superfood side,tea
+22,female,black,Spicy Chicken Sandwich,waffle fries,water
+21,male,white,Chiken Nuggets 10pc,waffle fries,water
+42,male,asia,Chicken Sandwich,waffle fries,Milkshake
+28,female,white,Spicy Chicken Sandwich,Hashbrowns,soda
+39,female,black,chicken noodle soup,Hashbrowns,Milkshake
+46,female,white,Grilled Chicken Sandwich,Hashbrowns,lemonade
+7,female,white,Chicken Sandwich,waffle fries,soda
+16,female,white,Chicken Sandwich,Fruit Cup,soda
+56,male,white,Grilled Chicken Sandwich,waffle fries,Milkshake
+29,male,white,Chiken Nuggets 10pc,side salad,soda
+24,male,white,Grilled Chicken Sandwich,Hashbrowns,tea
+39,male,black,Chicken Sandwich,waffle fries,soda
+41,male,asia,Chicken Sandwich,Hashbrowns,lemonade
+32,female,asia,chicken noodle soup,waffle fries,nothing
+26,male,white,Grilled Chicken Sandwich,side salad,water
+17,male,black,Chiken Nuggets 10pc,waffle fries,water
+48,male,black,Spicy Chicken Sandwich,nothing,soda
+41,male,black,Grilled Chicken Sandwich,waffle fries,water
+68,male,india,Salad Meal,waffle fries,nothing
+29,female,india,Chicken Sandwich,waffle fries,soda
+20,male,white,Grilled Chicken Sandwich,nothing,water
+33,male,white,Chicken Sandwich,nothing,nothing
+42,male,black,Grilled Chicken Sandwich,waffle fries,soda
+22,male,india,Chiken Nuggets 6pc,Hashbrowns,tea
+79,male,white,Chicken Sandwich,Hashbrowns,lemonade
+29,male,black,Grilled Chicken Sandwich,superfood side,soda
+20,female,white,chicken tortilla soup,waffle fries,soda
+27,female,white,Spicy Chicken Sandwich,side salad,nothing
+80,female,india,Grilled Chicken Sandwich,Hashbrowns,nothing
+43,male,white,Spicy Chicken Sandwich,waffle fries,soda
+45,male,white,Spicy Deluxe Sandwich,waffle fries,nothing
+62,male,white,Spicy Chicken Sandwich,Hashbrowns,soda
+51,male,black,Chicken Sandwich,waffle fries,lemonade
+8,female,india,Chicken Sandwich,waffle fries,Milkshake
+24,male,asia,Spicy Chicken Sandwich,Fruit Cup,soda
+24,female,asia,Chiken Nuggets 10pc,superfood side,tea
+26,female,white,Chicken Sandwich,waffle fries,Milkshake
+25,female,black,chicken noodle soup,Hashbrowns,tea
+29,female,white,Grilled Chicken Sandwich,nothing,soda
+30,male,black,Spicy Chicken Sandwich,Hashbrowns,water
+6,male,india,Chiken Nuggets 10pc,nothing,nothing
+20,male,white,Chicken Sandwich,superfood side,water
+30,male,white,Chiken Nuggets 6pc,waffle fries,water
+50,male,asia,Spicy Chicken Sandwich,side salad,soda
+60,female,black,Chicken Sandwich,waffle fries,nothing
+19,male,india,Grilled Chicken Sandwich,Fruit Cup,nothing
+34,male,india,Chicken Sandwich,waffle fries,Milkshake
+42,male,black,Grilled Chicken Sandwich,waffle fries,tea
+20,female,white,Chicken Sandwich,Hashbrowns,soda
+20,male,white,Spicy Chicken Sandwich,waffle fries,water
+33,male,black,Spicy Chicken Sandwich,nothing,water
+31,male,white,Chicken Sandwich,waffle fries,Milkshake
+37,female,black,Grilled Chicken Sandwich,Hashbrowns,lemonade
+32,male,white,Grilled Chicken Sandwich,side salad,water
+22,male,black,Spicy Chicken Sandwich,waffle fries,soda
+29,male,asia,chicken tortilla soup,waffle fries,soda
+22,male,white,chicken noodle soup,waffle fries,tea
+55,male,black,Chicken Sandwich,waffle fries,water
+60,male,black,Grilled Chicken Sandwich,waffle fries,Milkshake
+24,male,white,chicken noodle soup,waffle fries,water
+25,male,black,chicken tortilla soup,waffle fries,Milkshake
+25,female,india,Spicy Chicken Sandwich,waffle fries,water
+19,male,black,Spicy Chicken Sandwich,nothing,Milkshake
+16,female,black,Grilled Chicken Sandwich,Hashbrowns,water
+55,male,black,Grilled Chicken Sandwich,waffle fries,tea
+19,male,india,Spicy Chicken Sandwich,Hashbrowns,nothing
+22,male,white,chicken noodle soup,superfood side,soda
+18,male,white,Grilled Chicken Sandwich,side salad,soda
+30,male,white,Chiken Nuggets 6pc,waffle fries,lemonade
+36,female,black,Grilled Chicken Sandwich,Hashbrowns,Milkshake
+31,male,black,Grilled Chicken Sandwich,waffle fries,water
+24,male,black,Chiken Nuggets 6pc,nothing,nothing
+59,male,white,Chicken Sandwich,waffle fries,Milkshake
+30,male,white,Spicy Chicken Sandwich,waffle fries,water
+40,male,black,Chicken Sandwich,waffle fries,nothing
+28,male,black,Grilled Chicken Sandwich,waffle fries,soda
+23,male,white,Chicken Sandwich,nothing,soda
+24,male,asia,Grilled Chicken Sandwich,waffle fries,Milkshake
+51,female,black,Spicy Chicken Sandwich,waffle fries,water
+27,male,black,Spicy Chicken Sandwich,waffle fries,tea
+30,female,white,Salad Meal,waffle fries,Milkshake
+25,male,india,Spicy Chicken Sandwich,Hashbrowns,soda
+26,male,black,Chicken Sandwich,waffle fries,water
+44,female,black,Spicy Chicken Sandwich,waffle fries,tea
+64,female,white,Spicy Chicken Sandwich,nothing,nothing
+55,male,white,Spicy Chicken Sandwich,Hashbrowns,Milkshake
+32,male,black,Spicy Chicken Sandwich,Fruit Cup,water
+27,female,asia,Spicy Chicken Sandwich,superfood side,nothing
+74,male,black,Chicken Sandwich,nothing,Milkshake
+58,male,black,Spicy Deluxe Sandwich,waffle fries,soda
+41,male,india,Spicy Chicken Sandwich,Hashbrowns,soda
+28,male,white,Chiken Nuggets 6pc,nothing,lemonade
+41,male,india,Salad Meal,waffle fries,water
+26,male,black,Grilled Chicken Sandwich,waffle fries,tea
