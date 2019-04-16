@@ -1,6 +1,9 @@
+#input: audio file 'Recording1.mp3' in current directory
+#output: dictionary orders {order, quantity}
+
+#uses AWS to move file to s3 storage
 #uses AWS to transcribe audio stored in AWS s3 storage to text
-#to do: add voice input and analyze output
-#change job name for each run
+#converts transcription to order
 from __future__ import print_function
 import time
 import boto3
@@ -14,6 +17,7 @@ class Audio:
     #get transcript of input
     @staticmethod
     def getTranscript():
+        #credentials
         access_key = ''
         key_id = ''
         #set up AWS transcribe
@@ -184,58 +188,78 @@ class Audio:
         operators = ["to"]#"with", "without", "and", "no", "not", "meal"}
         OPERATORS = ["TO"]#"with", "without", "and", "no", "not", "meal"}
 
+        #takes the transcription and converts to lowercase, then converts any wword of interest to an uppercase tag indicating that it is
+        #important. Then erases the remaining ;lowercase letters
+
+        #convert to lowercase for processing: lowercase means unimportant
         transcript = transcript.lower() + ' '
         print(transcript)
+        #remove punctuation
         for char in puctuation:
             transcript = transcript.replace(char,'')
         print(transcript)
+        #replace words of interest with order tags
         for y in range(len(order_list)):
             transcript = transcript.replace(order_list[y],orders[y])
         print(transcript)
+        #
         for y in range(len(alternative_order_list)):
             transcript = transcript.replace(alternative_order_list[y],orders[y])
         print(transcript)
+        #
         for y in range(len(third_order_list)):
-            transcript = transcript.replace(alternative_order_list[y],orders[y])
+            transcript = transcript.replace(third_order_list[y],orders[y])
         print(transcript)
+        #
         for y in range(len(number_order_list)):
             transcript = transcript.replace(number_order_list[y],orders[y])
         print(transcript)
+        #replace words of interest with number tags #applied after number_order_list to avoid conflicts
         for y in range(len(quantities)):
             transcript = transcript.replace(quantities[y],QUANTITIES[y])
         print(transcript)
+        #finds the word 'to' in transcription to prevent confusion with two
         for y in range(len(operators)):
             transcript = transcript.replace(operators[y],OPERATORS[y])
         print(transcript)
+        #removes all lowercase letters that have not been converted to an order or number tag
         for char in lowercase:
             transcript = transcript.replace(char,'')
         print(transcript)
 
+        #take the filtered order data and convert to  dictionary orders{} containing {order, quantity}
         q = False
         qu = 1
 
+        #for every order/quantity
         while True:
+            #find next word
             index = transcript.find(' ')
             if index == -1:
                 word = transcript
             else:
                 word = transcript[:index]
+            #compare word to list of all order tags and add to orders dict with quantity (if no quantity use 1)
             if(word in orders):
                 if(q == False):
                     qu = 1
                 order[order_output[orders.index(word)]] = qu
                 q = False
+            #compare word to list of all order tags and update qu to indicate most recent quantity
             elif(word in QUANTITIES):
                 qu = QUANTITIES.index(word)+1
                 q = True
+            #if no qunatity but 'to' is found assume it is 2
             elif(word == 'TO' and q == False):
                 qu = 2
                 q = True
-
+            
+            #if no word left, end loop #if word left delete processed word
             if index == -1:
                 break
             else:
                 transcript = transcript[index+1:]
+
         return order
 
 if __name__ == "__main__":
