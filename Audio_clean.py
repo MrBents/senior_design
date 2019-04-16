@@ -7,59 +7,130 @@ import boto3
 from boto3.s3.transfer import S3Transfer
 import urllib
 import json
+import os
 
 class Audio:
+    
+    #get transcript of input
+    @staticmethod
+    def getTranscript():
+        access_key = ''
+        key_id = ''
+        #set up AWS transcribe
+        transcribe = boto3.client('transcribe',
+            region_name='us-east-2',
+            aws_secret_access_key =access_key,
+            aws_access_key_id = key_id)
+        client = boto3.client('s3', 'us-west-2',
+            aws_secret_access_key =access_key,
+            aws_access_key_id = key_id)
+        transfer = S3Transfer(client)
+        transfer.upload_file('Recording1.mp3', 'sound-joelmussell', 'Recording.mp3')
+        job_name = "Transcribe63"
+        job_uri = "https://s3.us-east-2.amazonaws.com/sound-joelmussell/Recording.mp3"
+
+        #start transcription
+        transcribe.start_transcription_job(
+            TranscriptionJobName=job_name,
+            Media={'MediaFileUri': job_uri},
+            MediaFormat='mp3',
+            LanguageCode='en-US'
+        )
+
+        #wait for AWS to respond
+        while True:
+            status = transcribe.get_transcription_job(TranscriptionJobName=job_name)
+            if status['TranscriptionJob']['TranscriptionJobStatus'] in ['COMPLETED', 'FAILED']:
+                break
+            print("Not ready yet...")
+            time.sleep(5)
+
+        #record transcribe output
+        text = transcribe.get_transcription_job(TranscriptionJobName=job_name)
+
+        #open json reults file  and extract information
+        jsonText = urllib.urlopen(text['TranscriptionJob']['Transcript']['TranscriptFileUri']).read()
+        index = jsonText.find('\"transcript\"') + 14
+        transcript = jsonText[index:]
+        index = transcript.find('\"')
+        transcript = transcript[:index]
+        os.remove("Recording1.mp3")
+        transcribe.delete_transcription_job(TranscriptionJobName=job_name)
+        print(transcript)
+        return transcript
+
     #process transcript
     #returns dict() with order
     @staticmethod
     def getOrder(transcript):
-        puctuation = {",", "."}
+        puctuation = {",", ".", "?", "!"}
+        lowercase = {"'s", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
 
         #return value
         order = {}
 
         number_order_list = ["number one", "====", "====", 
-            "number two", "number five", "numbrer seven", "number three", 
+            "number two", "number five", "number seven", "number three", 
             "number four", "number eight", "number six", "===="]
 
         #potential input values searched by program stored in parellel arrays in reverse order of processing
+        third_order_list = ["sandwich", "deluxe", "spicy chicken", 
+            "====", "grilled chicken", "club", "====", 
+            "strip", "wrap", "====", "====", "mini", 
+            "====", "bacon egg and cheese biscuit", "sausage egg and cheese biscuit", 
+            "====", "sunflower bagel", "====", "yogurt", 
+            "fruit", "chicken egg and cheese bagel", "hash brown burrito", 
+            "hash brown bowl", "muffin", "bacon egg and cheese muffin", 
+            "sausage egg and cheese muffin", "====", "fries", "====", 
+            "noodle", "tortilla", "superfood", "apple sauce", 
+            "====", "====", "slaw", "====", "chip", 
+            "kid's nugget", "kid's chicken strip", "kid's grilled nugget", 
+            "chocolate milk shake", "cookies and cream milk shake", "strawberry milk shake", 
+            "milk shake", "====", "====", "====",
+            "ice-cream", "key lime", "sweet", "lemonade", 
+            "coke", "doctor pepper", "water", "====", 
+            "====","chocolate milk",  "milk", "coffee", "====", 
+            "====", "====", "unsweet",
+            "====", "====", "====", "====",
+            "====", "====", "===="]
+        #
         alternative_order_list = ["sandwich", "deluxe", "spicy chicken", 
-            "====", "grilled chicken", "club", "nuggets", 
-            "strips", "wrap", "grilled nuggets", "====", "minis", 
+            "====", "grilled chicken", "club", "nugget", 
+            "strip", "wrap", "grilled nugget", "====", "mini", 
             "====", "bacon egg and cheese biscuit", "sausage egg and cheese biscuit", 
             "====", "sunflower bagel", "====", "yogurt", 
             "fruit", "chicken egg and cheese bagel", "hash brown burrito", 
             "hash brown bowl", "muffin", "bacon egg and cheese muffin", 
             "sausage egg and cheese muffin", "====", "fries", "====", 
             "noodle soup", "tortilla soup", "superfood", "apple sauce", 
-            "====", "====", "slaw", "====", "chips", 
-            "kid's nuggets", "kid's chicken strips", "kid's grilled nuggets", 
-            "====", "====", "====", 
-            "====", "====", "====", "cookie",
-            "ice-cream", "frosted key lime", "sweet tea", "lemonade", 
+            "====", "====", "slaw", "====", "chip", 
+            "kid's nugget", "kid's chicken strip", "kid's grilled nugget", 
+            "chocolate milk shake", "cookies and cream milk shake", "strawberry milk shake", 
+            "vanilla milk shake", "====", "====", "cookie",
+            "ice-cream", "key lime", "sweet tea", "lemonade", 
             "coke", "doctor pepper", "water", "====", 
-            "orange juice","====",  "milk", "coffee", "====", 
-            "gallon beverages", "====", "unsweet tea",
+            "====","chocolate milk",  "milk", "coffee", "====", 
+            "====", "====", "unsweet tea",
             "====", "====", "====", "====",
             "====", "====", "===="]
         #
         order_list = ["====", "====", "spicy chicken sandwich", 
-            "spicy deluxe", "grilled chicken sandwich", "grilled chicken club", "chicken nuggets", 
-            "chicken strips", "grilled cool wrap", "grilled chicken nuggets", "chicken biscuit", "chicken minis", 
+            "spicy deluxe", "grilled chicken sandwich", "grilled chicken club", "chicken nugget", 
+            "chicken strip", "grilled cool wrap", "grilled chicken nugget", "chicken biscuit", "chicken mini", 
             "egg white grill", "bacon, egg and cheese biscuit", "sausage, egg and cheese biscuit", 
-            "buttered biscuit", "sunflower multigrain bagel", "hash browns", "greek yogurt parfait", 
+            "buttered biscuit", "sunflower multigrain bagel", "hash brown", "greek yogurt parfait", 
             "fruit cup", "chicken, egg and cheese bagel", "hash brown scramble burrito", 
             "hash brown scramble bowl", "english muffin", "bacon, egg and cheese muffin", 
             "sausage, egg and cheese muffin", "cobb salad", "waffle potato fries", "side salad", 
             "chicken noodle soup", "chicken tortilla soup", "superfood side", "buddy's apple sauce", 
-            "carrot raisin salad", "chicken salad", "cole slaw", "cornbread", "potato chips", 
+            "carrot raisin salad", "chicken salad", "cole slaw", "cornbread", "potato chip", 
             "nuggets kid's", "chicken strips kid's", "grilled nuggets kid's", 
             "chocolate milkshake", "cookies and cream milkshake", "strawberry milkshake", 
             "vanilla milkshake", "frosted coffee", "frosted lemonade", "chocolate chunk cookie",
-            "icedream cone", "frosted key lime", "iced tea sweetened", "====", 
+            "ice dream cone", "key lime", "iced tea sweetened", "====", 
             "coca-cola", "dr pepper", "bottled water", "apple juice", 
-            "simply orange", "chocolate milk", "white milk", "====", "iced coffee", 
-            "gallon beverages", "diet lemonade", "iced tea unsweetened",
+            "orange", "====", "white milk", "====", "iced coffee", 
+            "gallon", "diet lemonade", "iced tea unsweetened",
             "chick-fil-a sauce", "polynesian", "honey mustard", "ranch sauce",
             "buffalo", "barbeque", "sriracha"]
         
@@ -110,18 +181,35 @@ class Audio:
         QUANTITIES = ["ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN"]
 
         #operators array
-        operators = {"with", "without", "and", "no", "not", "meal"}
+        operators = ["to"]#"with", "without", "and", "no", "not", "meal"}
+        OPERATORS = ["TO"]#"with", "without", "and", "no", "not", "meal"}
 
-        for y in range(len(order_list)):
-            transcript = transcript.replace(order_list[y],orders[y])
-        for y in range(len(alternative_order_list)):
-            transcript = transcript.replace(alternative_order_list[y],orders[y])
-        for y in range(len(number_order_list)):
-            transcript = transcript.replace(number_order_list[y],orders[y])
-        for y in range(len(quantities)):
-            transcript = transcript.replace(quantities[y],QUANTITIES[y])
+        transcript = transcript.lower() + ' '
+        print(transcript)
         for char in puctuation:
             transcript = transcript.replace(char,'')
+        print(transcript)
+        for y in range(len(order_list)):
+            transcript = transcript.replace(order_list[y],orders[y])
+        print(transcript)
+        for y in range(len(alternative_order_list)):
+            transcript = transcript.replace(alternative_order_list[y],orders[y])
+        print(transcript)
+        for y in range(len(third_order_list)):
+            transcript = transcript.replace(alternative_order_list[y],orders[y])
+        print(transcript)
+        for y in range(len(number_order_list)):
+            transcript = transcript.replace(number_order_list[y],orders[y])
+        print(transcript)
+        for y in range(len(quantities)):
+            transcript = transcript.replace(quantities[y],QUANTITIES[y])
+        print(transcript)
+        for y in range(len(operators)):
+            transcript = transcript.replace(operators[y],OPERATORS[y])
+        print(transcript)
+        for char in lowercase:
+            transcript = transcript.replace(char,'')
+        print(transcript)
 
         q = False
         qu = 1
@@ -140,6 +228,9 @@ class Audio:
             elif(word in QUANTITIES):
                 qu = QUANTITIES.index(word)+1
                 q = True
+            elif(word == 'TO' and q == False):
+                qu = 2
+                q = True
 
             if index == -1:
                 break
@@ -149,6 +240,20 @@ class Audio:
 
 if __name__ == "__main__":
     # customerTest = Customer()
-    #order = Audio.getOrder(Audio.getTranscript())
-    order = Audio.getOrder('Can I get three number two meal with five cookies and cream milkshake and a chicken biscuit please')
+    order = Audio.getOrder(Audio.getTranscript())
+    #order = Audio.getOrder("Can I get three chicken strips")
     print(order)
+"""
+    elif(word == "meal"):
+        order = order + '**'
+    elif(word == "with"):
+        order = order + '-'
+    elif(word == "without"):
+        order = order + '-/-'
+    elif(word == "no"):
+        order = order + '/-'
+    elif(word == "and"):
+        order = order + '    '
+    elif(word in operators):
+        order = order + '-' + word + '-'
+"""
