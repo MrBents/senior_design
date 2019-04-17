@@ -1,4 +1,5 @@
 from numpy.random import choice
+import pandas as pd
 
 
 def normalize(arr):
@@ -117,6 +118,9 @@ age_p = normalize([grade_age(e) for e in ages])
 
 
 ethnic = ["white", "black", "india", "asia"]
+eth_mapper = {}
+for i, e in enumerate(ethnic):
+    eth_mapper[e] = i
 ethnic_p = normalize([18, 8, 5, 5])
 
 gender = ["male", "female"]
@@ -134,6 +138,10 @@ for i in range(1000):
 
     lista.append([i_age, i_gender, i_ethnic, i_food, i_sides, i_drink])
 
+df = pd.DataFrame(lista[1:], columns=lista[0])
+df[["age", "gender", "ethnic_origin", "drink"]].to_csv("drink.csv", index=False)
+df[["age", "gender", "ethnic_origin", "food"]].to_csv("food.csv", index=False)
+df[["age", "gender", "ethnic_origin", "side"]].to_csv("side.csv", index=False)
 
 # def longestSequence(node, maxi=float('-inf'), cur_count=0):
 #         maxx = maxi
