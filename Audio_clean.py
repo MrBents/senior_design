@@ -6,12 +6,32 @@ import time
 import boto3
 import urllib
 import json
-
+from Customer import Customer_Order
 class Audio:
+    def __init__(self):
+        self.menu = ["Chicken Sandwich", "Deluxe Sandwich", "Spicy Chicken Sandwich", 
+            "Spicy Deluxe Sandwich", "Grilled Chicken Sandwich", "Grilled Chicken Club", "Nuggets", 
+            "Chick-n-Strips", "Grilled Cool Wrap", "Grilled Nuggets", "Chicken Biscuit", "Chick-n-Minis", 
+            "Egg White Grill", "Bacon, Egg & Cheese Biscuit", "Sausage, Egg & Cheese Biscuit", 
+            "Buttered Biscuit", "Sunflower Multigrain Bagel", "Hash Browns", "Greek Yogurt Parfait", 
+            "Fruit Cup", "Chicken, Egg & Cheese Bagel", "Hash Brown Scramble Burrito", 
+            "Hash Brown Scramble Bowl", "English Muffin", "Bacon, Egg & Cheese Muffin", 
+            "Sausage, Egg & Cheese Muffin", "Cobb Salad", "Waffel Potato Fries", "Side Salad", 
+            "Chicken Noodle Soup", "Chicken Tortilla Soup", "Superfood Side", "Buddy's Apple Sauce", 
+            "Carrot Raisin Salad", "Chicken Salad", "Cole Slaw", "Cornbread", "Waffle Potato Chips", 
+            "Nugget Kid's Meal", "Chick-n-Strips Kid's Meal", "Grilled Nuggets Kid's Meal", 
+            "Chocolate Milkshake", "Cookies & Cream Milkshake", "Strawberry Milkshake", 
+            "Vanilla Milkshake", "Frosted Coffee", "Frosted Lemonade", "Chocolate Chunk Cookie",
+            "Icedream Cone", "Frosted Key Lime", "Freshly-Brewed Iced Tea Sweetened", "Lemonade", 
+            "Coca-Cola", "Dr Pepper", "DASANI Bottled Water", "Honest Kids Apple Juice", 
+            "Simply Orange", "1% Chocolate Milk", "1% White Milk", "Coffee", "Iced Coffee", 
+            "Gallon Beverages", "Chick-fil-A Diet Lemonade", "Freshly-Brewed Iced Tea Unsweetened",
+            "Chick-fil-A Sauce", "Polynesian Sauce", "Honey Mustard Sauce", "Garden Herb Ranch Sauce",
+            "Zesty Buffalo Sauce", "Barbeque Sauce", "Sriracha Sauce"]
     
     #get transcript of input
-    @staticmethod
-    def getTranscript():
+    # @staticmethod
+    def getTranscript(self):
         #set up AWS transcribe
         transcribe = boto3.client('transcribe',
             region_name='us-east-2',
@@ -49,8 +69,8 @@ class Audio:
 
     #process transcript
     #returns dict() with order
-    @staticmethod
-    def getOrder(transcript):
+    # @staticmethod
+    def getOrder(self, transcript):
         puctuation = {",", "."}
 
         #return value
@@ -123,25 +143,7 @@ class Audio:
             "ZESTY=BUFFALO=SAUCE", "BARBEQUE=SAUCE", "SRIRACHA=SAUCE"] 
         
         #output array
-        order_output = ["Chicken Sandwich", "Deluxe Sandwich", "Spicy Chicken Sandwich", 
-            "Spicy Deluxe Sandwich", "Grilled Chicken Sandwich", "Grilled Chicken Club", "Nuggets", 
-            "Chick-n-Strips", "Grilled Cool Wrap", "Grilled Nuggets", "Chicken Biscuit", "Chick-n-Minis", 
-            "Egg White Grill", "Bacon, Egg & Cheese Biscuit", "Sausage, Egg & Cheese Biscuit", 
-            "Buttered Biscuit", "Sunflower Multigrain Bagel", "Hash Browns", "Greek Yogurt Parfait", 
-            "Fruit Cup", "Chicken, Egg & Cheese Bagel", "Hash Brown Scramble Burrito", 
-            "Hash Brown Scramble Bowl", "English Muffin", "Bacon, Egg & Cheese Muffin", 
-            "Sausage, Egg & Cheese Muffin", "Cobb Salad", "Waffel Potato Fries", "Side Salad", 
-            "Chicken Noodle Soup", "Chicken Tortilla Soup", "Superfood Side", "Buddy's Apple Sauce", 
-            "Carrot Raisin Salad", "Chicken Salad", "Cole Slaw", "Cornbread", "Waffle Potato Chips", 
-            "Nugget Kid's Meal", "Chick-n-Strips Kid's Meal", "Grilled Nuggets Kid's Meal", 
-            "Chocolate Milkshake", "Cookies & Cream Milkshake", "Strawberry Milkshake", 
-            "Vanilla Milkshake", "Frosted Coffee", "Frosted Lemonade", "Chocolate Chunk Cookie",
-            "Icedream Cone", "Frosted Key Lime", "Freshly-Brewed Iced Tea Sweetened", "Lemonade", 
-            "Coca-Cola", "Dr Pepper", "DASANI Bottled Water", "Honest Kids Apple Juice", 
-            "Simply Orange", "1% Chocolate Milk", "1% White Milk", "Coffee", "Iced Coffee", 
-            "Gallon Beverages", "Chick-fil-A Diet Lemonade", "Freshly-Brewed Iced Tea Unsweetened",
-            "Chick-fil-A Sauce", "Polynesian Sauce", "Honey Mustard Sauce", "Garden Herb Ranch Sauce",
-            "Zesty Buffalo Sauce", "Barbeque Sauce", "Sriracha Sauce"]
+        order_output = self.menu
 
         #quantities array
         quantities = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
@@ -184,9 +186,18 @@ class Audio:
             else:
                 transcript = transcript[index+1:]
         return order
+    
+    def return_actual_order(self):
+        '''
+        :return: customer order object 
+        '''
+        order = self.getOrder('Can I get three number two meal with four cookies and cream milkshake and a chicken biscuit please')
+        actual_order = Customer_Order(order, menu=self.menu)
+        return actual_order
 
 if __name__ == "__main__":
     # customerTest = Customer()
     #Audio.getOrder(Audio.getTranscript())
-    order = Audio.getOrder('Can I get three number two meal with four cookies and cream milkshake and a chicken biscuit please')
+    a = Audio()
+    order = a.return_actual_order()
     print(order)
