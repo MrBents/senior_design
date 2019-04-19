@@ -9,6 +9,7 @@ import Customer
 from Customer import CFA_Menu
 from Customer import Customer_Order
 from matplotlib import pyplot as plt
+import Audio_clean
 
 # TODO Customer faceID check
 # TODO update the retrieval of the customer information
@@ -19,14 +20,20 @@ class App:
         self.window.title(window_title)
         self.video_source = video_source
         self.fr = fr.FacialRecognition()
-
+        self.audioFile = None
+        self.current_order = None
         # Customer Info
         self.customers_detected = customer
         self.customer_label_text = tkinter.StringVar()
-        self.customer_label_text.set("customer_current_order")
-        # update
-        self.customer_likelihood_text = [tkinter.StringVar() for i in range(10)]
-        [self.customer_likelihood_text[i].set("customer_likelihoods") for i in range(10)]
+        self.customer_label_text.set("customer")
+        # Current Order
+        self.current_order_text = tkinter.StringVar()
+        self.current_order_text.set("customer_current_order")
+        # update order info
+        # self.customer_likelihood_text = [tkinter.StringVar() for i in range(10)]
+        # [self.customer_likelihood_text[i].set("customer_likelihoods") for i in range(10)]
+        # self.customer_likelihood_text = [tkinter.StringVar() for i in range(len(menu))]
+        # [self.customer_likelihood_text[i].set("customer_likelihoods") for i in range(len(menu))]
  
         # open video source (by default this will try to open the computer webcam)
         self.vid = MyVideoCapture(self.video_source)
@@ -34,17 +41,18 @@ class App:
         self.canvas = tkinter.Canvas(window, width = self.vid.width, height = self.vid.height)
         self.canvas.pack()
  
-        # Button that lets the user take a snapshot
-        # self.btn_snapshot=tkinter.Button(window, text="Snapshot", width=50, command=self.snapshot)
-        # self.btn_snapshot.pack(anchor=tkinter.CENTER, expand=True)
+        # Button that lets the user record the order
+        self.btn_snapshot=tkinter.Button(window, text="Record", width=50, command=self.record)
+        self.btn_snapshot.pack(anchor=tkinter.CENTER, expand=True)
 
-        # Customer Data Label
+        # Customer Label
         self.customer_label = tkinter.Label(window, textvariable = self.customer_label_text)
         self.customer_label.pack(anchor=tkinter.CENTER, expand=True)
-        self.customer_likelihood_label = []
-        for i in range(10):
-            self.customer_likelihood_label.append(tkinter.Label(window, textvariable = self.customer_likelihood_text[i]))
-            self.customer_likelihood_label[i].pack(anchor=tkinter.CENTER, expand=True)
+        # Customer info labels
+        # self.customer_likelihood_label = []
+        # for i in range(10):
+        #     self.customer_likelihood_label.append(tkinter.Label(window, textvariable = self.customer_likelihood_text[i]))
+        #     self.customer_likelihood_label[i].pack(anchor=tkinter.CENTER, expand=True)
  
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 15 
@@ -52,8 +60,26 @@ class App:
  
         self.window.mainloop()
  
-    def snapshot(self):
-        """Button functionality"""       
+    def record(self):
+        '''
+        Record Button
+        update the audio file with recording
+        '''
+        print("button clicked")   
+        self.audioFile = None
+
+
+    def get_transcribed_order(self):
+        '''
+        use the transcribe to get the orders
+        '''
+        self.current_order = Audio_clean.Audio.getOrder()
+ 
+    def get_faceID(self):
+        '''
+        :return: faceID 
+        '''
+        pass
  
     """important"""
     def update(self):
@@ -73,26 +99,10 @@ class App:
 
                 #TODO Customer faceID check
                 #   and update the customer, customer labels
+
                 # update customer label text
                 self.customer_label_text.set(str(self.customers_detected))
 
-                # # update all likelihoods
-                # for(i, item) in enumerate(self.customers_detected.item_ordering_likelihood):
-                #     # update customer's chance of ordering an item
-                #     # store it in temp tempVar
-                #     # tempVar = self.customers_detected.item_ordering_likelihood[i]
-                #     tempVar = item
-                #     food_name = menu[i]
-                #     tempStr = "".join(food_name + ":  " + str(tempVar))
-                #     self.customer_likelihood_text[i].set(tempStr)
-                index = self.customers_detected.get_top10_last10()
-                j = 0
-                for i in np.nditer(index):
-                    tempVar = self.customers_detected.item_amount[i]
-                    food_name = menu[i]
-                    tempStr = "".join(food_name + ":  " + str(tempVar))
-                    self.customer_likelihood_text[j].set(tempStr)
-                    j += 1
 
         if ret:
             self.photo = PIL.ImageTk.PhotoImage(image = img)
@@ -153,13 +163,11 @@ if __name__ == '__main__':
     orderList.append(order9)
     orderList.append(order10)
     orderList.append(order11)
-
-
     customer1 = Customer.Customer(face_id = 0, all_past_orders= orderList, menu_length=len(menu))
     customer2 = Customer.Customer(face_id = 1, all_past_orders= orderList, menu_length=len(menu))
     # customer1 = Customer.Customer(current_order = {"Delux Sandwich": 3}, likelihoods = [0.5, 0.6, 0.4, 0.3, 0.7, 0.9, 0.3, 0.1, 0.4, 0.4], faceid = 0)
 
     # Create a window and pass it to the Application object
-    App(tkinter.Tk(), window_title = "Tkinter and OpenCV", customer=customer1)
+    App(tkinter.Tk(), window_title = "Tkinter and OpenCV")
 
         
