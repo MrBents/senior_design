@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd 
-
-# TODO top 10 needs at least 10 orders
+# import Audio_clean
 
 class CFA_Menu():
     def __init__(self):
@@ -45,14 +44,15 @@ class Customer_Order():
                     self.order_item_check_array[menu.index(key)] = 1
 
     def __str__(self):
-        return ("".join(str(key) + ": " + str(value) for key, value in self.order.items()))
-
+        a = ("".join(str(key) + ": " + str(value) + ", " for key, value in self.order.items()))
+        return a 
 class Customer():
     def __init__(self, all_past_orders=[], face_id=None, menu_length=0, ethnicity=None, gender = None, age = None):
         self.face_id = face_id
         self.ethnicity = ethnicity
         self.age = age 
         self.gender = gender
+        
         self.info = pd.DataFrame(dtype=object)
         self.menu_length = menu_length
 
@@ -108,15 +108,16 @@ class Customer():
         return ind
     
     def __str__(self):
-        item_likelihoods = np.around(self.item_ordering_likelihood, decimals=2)
+        # item_likelihoods = np.around(self.item_ordering_likelihood, decimals=2)
         # return("faceID: {}\norder percentage: {}\ntotal item ordered: {}".format(self.face_id, item_likelihoods, self.item_amount))
-
+        # temp = None
+        # for order in self.all_past_orders:
+        #     temp = (order)
+        # return("faceID: {}\nCurrent Order: {}".format(self.face_id, temp))
         return("faceID: {}\n".format(self.face_id))
+        
 
-
-if __name__ == "__main__":
-    # print(np.__version__)
-    # customerTest = Customer()
+def init_customer():
     menu = CFA_Menu().order_list
     order1 = Customer_Order(order = {"Deluxe Sandwich": 3}, menu=menu)
     order2 = Customer_Order(order = {"Spicy Chicken Sandwich": 1}, menu=menu)
@@ -141,15 +142,21 @@ if __name__ == "__main__":
     orderList.append(order10)
 
     customer1 = Customer(face_id = 0, all_past_orders= orderList, menu_length=len(menu))
-
-    # print(order2)
-
     print(customer1)
     customer1.add(order1)
-    # top 10
+
+    # print top 10
     ind = customer1.get_top10_last10()
     print((ind))
     for x in np.nditer(ind):
         print(menu[x])
-    # print(menu[ind])
-    # print(customer1)
+
+    return customer1
+
+if __name__ == "__main__":
+    menu = CFA_Menu().order_list
+    # actual_order = []
+    # order = Audio_clean.Audio.getOrder('Can I get three number two meal with four cookies and cream milkshake and a chicken biscuit please')
+    # order = Customer_Order(order, menu=menu)
+    # actual_order.append(order)
+    # print(Customer(all_past_orders=actual_order, menu_length=len(menu)))
