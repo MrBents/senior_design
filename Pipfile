@@ -11,6 +11,8 @@ pillow = "*"
 pandas = "*"
 matplotlib = "*"
 boto3 = "*"
+firebase-admin = "*"
+scipy = "*"
 
 [dev-packages]
 
