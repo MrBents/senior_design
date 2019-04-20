@@ -9,7 +9,8 @@ import Customer
 from Customer import CFA_Menu
 from Customer import Customer_Order
 from matplotlib import pyplot as plt
-import Audio_clean
+import Audio as Audio_clean
+import google_speech as gg 
 
 # TODO Customer faceID check
 # TODO update the retrieval of the customer information
@@ -22,6 +23,9 @@ class App:
         self.fr = fr.FacialRecognition()
         self.audioFile = None
         self.current_order = None
+        self.gg = gg.adios()
+        self.ac = Audio_clean.Audio()
+
         # Customer Info
         self.customer_detected = customer
         self.customer_label_text = tkinter.StringVar()
@@ -29,11 +33,6 @@ class App:
         # Current Order
         self.current_order_text = tkinter.StringVar()
         self.current_order_text.set("customer_current_order")
-        # update order info
-        # self.customer_likelihood_text = [tkinter.StringVar() for i in range(10)]
-        # [self.customer_likelihood_text[i].set("customer_likelihoods") for i in range(10)]
-        # self.customer_likelihood_text = [tkinter.StringVar() for i in range(len(menu))]
-        # [self.customer_likelihood_text[i].set("customer_likelihoods") for i in range(len(menu))]
  
         # open video source (by default this will try to open the computer webcam)
         self.vid = MyVideoCapture(self.video_source)
@@ -42,18 +41,17 @@ class App:
         self.canvas.pack()
  
         # Button that lets the user record the order
-        self.btn_snapshot=tkinter.Button(window, text="Record", width=50, command=self.record)
+        self.btn_snapshot=tkinter.Button(window, text="Start Order", width=50, command=self.record)
         self.btn_snapshot.pack(anchor=tkinter.CENTER, expand=True)
 
         # Customer Label
         self.customer_label = tkinter.Label(window, textvariable = self.customer_label_text)
         self.customer_label.pack(anchor=tkinter.CENTER, expand=True)
-        # Customer info labels
-        # self.customer_likelihood_label = []
-        # for i in range(10):
-        #     self.customer_likelihood_label.append(tkinter.Label(window, textvariable = self.customer_likelihood_text[i]))
-        #     self.customer_likelihood_label[i].pack(anchor=tkinter.CENTER, expand=True)
- 
+
+        # Current Order Label
+        self.customer_order_label = tkinter.Label(window, textvariable = self.current_order_text)
+        self.customer_order_label.pack(anchor=tkinter.CENTER, expand=True)
+
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 15 
         self.update()
@@ -66,21 +64,24 @@ class App:
         update the audio file with recording
         '''
         print("button clicked")   
-        self.audioFile = None
-
+        # self.audioFile = 
+        self.gg.record()
         # finished recording
         # send to transcibe
-
-
         # get order
-        self.get_transcribed_order()
+        self.current_order_text.set(self.gg.get_adios())
+
+        # self.get_transcribed_order()
+        print(self.get_transcribed_order())
 
 
     def get_transcribed_order(self):
         '''
         use the transcribe to get the orders
         '''
-        self.current_order = Audio_clean.Audio.getOrder()
+        transcript = self.ac.getTranscript()
+        self.current_order = self.ac.getOrder(transcript=transcript)
+
         return self.current_order
  
     def get_faceID(self):
@@ -106,13 +107,13 @@ class App:
                     draw.rectangle([x, y, x+w, y+h], None, '#ff0000') 
                 del draw
                 
-                #TODO Customer faceID check
-                #   and update the customer, customer labels
-                if (new): 
-                    # create a temporary customer
-                    self.customer_detected = Customer.Customer()
-                else:
-                    pass
+                # #TODO Customer faceID check
+                # #   and update the customer, customer labels
+                # if (new): 
+                #     # create a temporary customer
+                #     self.customer_detected = Customer.Customer()
+                # else:
+                #     pass
 
 
                 # update customer label text
@@ -154,34 +155,8 @@ class MyVideoCapture:
             self.vid.release() 
 
 if __name__ == '__main__':
-    menu = CFA_Menu().order_list
-    order1 = Customer_Order(order = {"Deluxe Sandwich": 3}, menu=menu)
-    order2 = Customer_Order(order = {"Spicy Chicken Sandwich": 1}, menu=menu)
-    order3 = Customer_Order(order = {"Chicken Sandwich": 3}, menu=menu)
-    order4 = Customer_Order(order = {"Spicy Deluxe Sandwich": 3}, menu=menu)
-    order5 = Customer_Order(order = {"Grilled Chicken Sandwich": 1}, menu=menu)
-    order6 = Customer_Order(order = {"Grilled Chicken Club": 3}, menu=menu)
-    order7 = Customer_Order(order = {"Chick-n-Strips": 3}, menu=menu)
-    order8 = Customer_Order(order = {"Grilled Cool Wrap": 3}, menu=menu)
-    order9 = Customer_Order(order = {"Grilled Nuggets": 3}, menu=menu)
-    order10 = Customer_Order(order = {"Chicken Biscuit": 3}, menu=menu)
-    order11 = Customer_Order(order = {"DASANI Bottled Water": 3}, menu=menu)
-    orderList = []
-    orderList.append(order1)
-    orderList.append(order2)
-    orderList.append(order3)
-    orderList.append(order4)
-    orderList.append(order5)
-    orderList.append(order6)
-    orderList.append(order7)
-    orderList.append(order8)
-    orderList.append(order9)
-    orderList.append(order10)
-    orderList.append(order11)
-    customer1 = Customer.Customer(face_id = 0, all_past_orders= orderList, menu_length=len(menu))
-    # customer1 = Customer.Customer(current_order = {"Delux Sandwich": 3}, likelihoods = [0.5, 0.6, 0.4, 0.3, 0.7, 0.9, 0.3, 0.1, 0.4, 0.4], faceid = 0)
 
     # Create a window and pass it to the Application object
-    App(tkinter.Tk(), window_title = "Tkinter and OpenCV")
+    App(tkinter.Tk(), window_title = "CFA Counter")
 
         
