@@ -12,7 +12,12 @@ from boto3.s3.transfer import S3Transfer
 import urllib
 import json
 import os
-import Audio_record
+# import Audio_record
+
+#TODO PER RUN:
+#TODO 1.    add keys
+#TODO 2.    update job uri
+
 
 class Audio:
     
@@ -20,10 +25,11 @@ class Audio:
     @staticmethod
     def getTranscript():
         #Record audio
-        Audio_record.record_audio()
+        # Audio_record.record_audio()
         #credentials
         access_key = ''
         key_id = ''
+
         #set up AWS transcribe
         transcribe = boto3.client('transcribe',
             region_name='us-east-2',
@@ -34,7 +40,9 @@ class Audio:
             aws_access_key_id = key_id)
         transfer = S3Transfer(client)
         transfer.upload_file('Recording1.wav', 'sound-joelmussell', 'Recording.wav')
-        job_name = "Transcribe63"
+        
+        job_name = "Transcribe_1112"
+
         job_uri = "https://s3.us-east-2.amazonaws.com/sound-joelmussell/Recording.wav"
 
         #start transcription
@@ -50,7 +58,7 @@ class Audio:
             status = transcribe.get_transcription_job(TranscriptionJobName=job_name)
             if status['TranscriptionJob']['TranscriptionJobStatus'] in ['COMPLETED', 'FAILED']:
                 break
-            print("Not ready yet...")
+            print("AWS magicking...")
             time.sleep(5)
 
         #record transcribe output
@@ -67,7 +75,9 @@ class Audio:
         #transcript = transcript[:index]
         #os.remove("Recording1.wav")
         transcribe.delete_transcription_job(TranscriptionJobName=job_name)
+        '''
         print(transcript)
+        '''
         return transcript
 
     #process transcript
@@ -240,55 +250,55 @@ class Audio:
 
         #convert to lowercase for processing: lowercase means unimportant
         transcript = transcript.lower() + ' '
-        print(transcript)
+        # print(transcript)
         #remove punctuation
         for char in puctuation:
             transcript = transcript.replace(char,'')
-        print(transcript)
+        # print(transcript)
         #preliminary translate
         for y in range(len(translate)):
             transcript = transcript.replace(translate[y],TRANSLATE[y])
-        print(transcript)
+        # print(transcript)
         #
         for y in range(len(translate)):
             transcript = transcript.replace(translate[y],TRANSLATE[y])
-        print(transcript)
+        # print(transcript)
         #replace words of interest with order tags
         for y in range(len(order_list)):
             transcript = transcript.replace(order_list[y],orders[y])
-        print(transcript)
+        # print(transcript)
         #
         for y in range(len(alternative_order_list)):
             transcript = transcript.replace(alternative_order_list[y],orders[y])
-        print(transcript)
+        # print(transcript)
         #
         for y in range(len(third_order_list)):
             transcript = transcript.replace(third_order_list[y],orders[y])
-        print(transcript)
+        # print(transcript)
         #
         for y in range(len(number_order_list)):
             transcript = transcript.replace(number_order_list[y],orders[y])
-        print(transcript)
+        # print(transcript)
         #replace words of interest with number tags #applied after number_order_list to avoid conflicts
         for y in range(len(quantities)):
             transcript = transcript.replace(quantities[y],QUANTITIES[y])
-        print(transcript)
+        # print(transcript)
         #
         for y in range(len(alt_quantities)):
             transcript = transcript.replace(alt_quantities[y],ALT_QUANTITIES[y])
-        print(transcript)
+        # print(transcript)
         #
         for y in range(len(alt_quantities2)):
             transcript = transcript.replace(alt_quantities2[y],ALT_QUANTITIES[y])
-        print(transcript)
+        # print(transcript)
         #finds the word 'to' in transcription to prevent confusion with two
         for y in range(len(operators)):
             transcript = transcript.replace(operators[y],OPERATORS[y])
-        print(transcript)
+        # print(transcript)
         #removes all lowercase letters that have not been converted to an order or number tag
         for char in lowercase:
             transcript = transcript.replace(char,'')
-        print(transcript)
+        # print(transcript)
 
         #take the filtered order data and convert to  dictionary orders{} containing {order, quantity}
         order_index = 1
