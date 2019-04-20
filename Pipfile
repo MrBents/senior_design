@@ -13,6 +13,7 @@ matplotlib = "*"
 boto3 = "*"
 firebase-admin = "*"
 scipy = "*"
+awscli = "*"
 
 [dev-packages]
 
