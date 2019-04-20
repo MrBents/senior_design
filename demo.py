@@ -15,7 +15,7 @@ import Audio_clean
 # TODO update the retrieval of the customer information
 
 class App:
-    def __init__(self, window, window_title, video_source=1, customer = None):
+    def __init__(self, window, window_title, video_source=0, customer = None):
         self.window = window
         self.window.title(window_title)
         self.video_source = video_source
@@ -23,7 +23,7 @@ class App:
         self.audioFile = None
         self.current_order = None
         # Customer Info
-        self.customers_detected = customer
+        self.customer_detected = customer
         self.customer_label_text = tkinter.StringVar()
         self.customer_label_text.set("customer")
         # Current Order
@@ -68,12 +68,20 @@ class App:
         print("button clicked")   
         self.audioFile = None
 
+        # finished recording
+        # send to transcibe
+
+
+        # get order
+        self.get_transcribed_order()
+
 
     def get_transcribed_order(self):
         '''
         use the transcribe to get the orders
         '''
         self.current_order = Audio_clean.Audio.getOrder()
+        return self.current_order
  
     def get_faceID(self):
         '''
@@ -90,18 +98,25 @@ class App:
         if ret:
             img = PIL.Image.fromarray(frame)
             self.fr.face_detect(frame)
+            # if a face is found
             if (self.fr.faces is not None):
                 # draw red rectangle on face region
                 draw = PIL.ImageDraw.Draw(img)
                 for (x,y,w,h) in self.fr.faces:
                     draw.rectangle([x, y, x+w, y+h], None, '#ff0000') 
                 del draw
-
+                
                 #TODO Customer faceID check
                 #   and update the customer, customer labels
+                if (new): 
+                    # create a temporary customer
+                    self.customer_detected = Customer.Customer()
+                else:
+                    pass
+
 
                 # update customer label text
-                self.customer_label_text.set(str(self.customers_detected))
+                self.customer_label_text.set(str(self.customer_detected))
 
 
         if ret:
@@ -164,7 +179,6 @@ if __name__ == '__main__':
     orderList.append(order10)
     orderList.append(order11)
     customer1 = Customer.Customer(face_id = 0, all_past_orders= orderList, menu_length=len(menu))
-    customer2 = Customer.Customer(face_id = 1, all_past_orders= orderList, menu_length=len(menu))
     # customer1 = Customer.Customer(current_order = {"Delux Sandwich": 3}, likelihoods = [0.5, 0.6, 0.4, 0.3, 0.7, 0.9, 0.3, 0.1, 0.4, 0.4], faceid = 0)
 
     # Create a window and pass it to the Application object
