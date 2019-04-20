@@ -272,5 +272,6 @@ if __name__ == "__main__":
     # customerTest = Customer()
     #Audio.getOrder(Audio.getTranscript())
     a = Audio()
+    # asef = a.getTranscript()
     order = a.return_actual_order()
     print(order)
