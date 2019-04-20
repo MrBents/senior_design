@@ -14,6 +14,8 @@ boto3 = "*"
 firebase-admin = "*"
 scipy = "*"
 awscli = "*"
+speechrecognition = "*"
+pyaudio = "*"
 
 [dev-packages]
 
