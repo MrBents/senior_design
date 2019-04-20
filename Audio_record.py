@@ -134,6 +134,7 @@ def record_audio():
 
         
 if __name__=="__main__":
+    pass
     #rec = Recorder(channels=2)
     #with rec.open('nonblocking.wav', 'wb') as recfile:
         # records for set duration (blocking => nothing else can happen in code while this records)
