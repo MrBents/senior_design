@@ -11,7 +11,7 @@ class CFA_Menu():
             "Buttered Biscuit", "Sunflower Multigrain Bagel", "Hash Browns", "Greek Yogurt Parfait", 
             "Fruit Cup", "Chicken, Egg & Cheese Bagel", "Hash Brown Scramble Burrito", 
             "Hash Brown Scramble Bowl", "English Muffin", "Bacon, Egg & Cheese Muffin", 
-            "Sausage, Egg & Cheese Muffin", "Cobb Salad", "Waffel Potato Fries", "Side Salad", 
+            "Sausage, Egg & Cheese Muffin", "Cobb Salad", "Waffle Potato Fries", "Side Salad", 
             "Chicken Noodle Soup", "Chicken Tortilla Soup", "Superfood Side", "Buddy's Apple Sauce", 
             "Carrot Raisin Salad", "Chicken Salad", "Cole Slaw", "Cornbread", "Waffle Potato Chips", 
             "Nugget Kid's Meal", "Chick-n-Strips Kid's Meal", "Grilled Nuggets Kid's Meal", 
