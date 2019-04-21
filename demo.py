@@ -32,20 +32,22 @@ class App:
         self.customer_detected = customer
         self.customer_label_text = tkinter.StringVar()
         self.customer_label_text.set("customer")
-        # # Current Order
-        # self.current_order_text = tkinter.StringVar()
-        # self.current_order_text.set("customer_current_order")
-         # Current Order Transcribe
+
+        # Current Order Transcribe
         self.current_order_transcribe_text = tkinter.StringVar()
         self.current_order_transcribe_text.set("customer_current_order")
+        
         # open video source (by default this will try to open the computer webcam)
         self.vid = MyVideoCapture(self.video_source)
+        
         # Create a canvas that can fit the above video source size
         self.canvas = tkinter.Canvas(window, width = self.vid.width, height = self.vid.height)
         self.canvas.pack()
  
         # Button that lets the user record the order
-        self.btn_snapshot=tkinter.Button(window, text="Start Order", width=50, command=self.record)
+        self.btn_text = tkinter.StringVar()
+        self.btn_text.set("Start Order")
+        self.btn_snapshot=tkinter.Button(window, textvariable=(self.btn_text), width=50, command=self.record)
         self.btn_snapshot.pack(anchor=tkinter.CENTER, expand=True)
 
         # Customer Label
@@ -71,11 +73,9 @@ class App:
         # self.audioFile = 
         self.gg.record()
         # finished recording
-        # send to transcibe
-        
+
         # get order
         self.current_order_transcribe_text.set(self.gg.get_adios())
-
         # self.get_transcribed_order()
         temp = self.get_transcribed_order()
         print(temp)
