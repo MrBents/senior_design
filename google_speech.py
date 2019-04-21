@@ -1,10 +1,11 @@
 import speech_recognition as sr 
+import Audio
 
 class adios:
     def __init__(self):
         self.rek = sr.Recognizer()
-        self.audio = None
-    
+        self.audio = ""
+
     def record(self):
         with sr.Microphone() as source:
             print('say Something')
@@ -22,6 +23,9 @@ class adios:
             pass
     
 if __name__ == "__main__":
+    adddd = Audio.Audio()
     aids = adios()
     aids.record()
-    print(aids.get_adios())    
+    
+    a = adddd.getOrder(aids.get_adios())
+    print(a)
