@@ -26,7 +26,7 @@ class Audio:
     def getTranscript():
         #Record audio
         # Audio_record.record_audio()
-        #credentials
+        #TODO credentials
         access_key = ''
         key_id = ''
 
@@ -40,7 +40,7 @@ class Audio:
             aws_access_key_id = key_id)
         transfer = S3Transfer(client)
         transfer.upload_file('Recording1.wav', 'sound-joelmussell', 'Recording.wav')
-        
+        #TODO 
         job_name = "Transcribe_1112"
 
         job_uri = "https://s3.us-east-2.amazonaws.com/sound-joelmussell/Recording.wav"
