@@ -86,9 +86,10 @@ class App:
         '''
         use the transcribe to get the orders
         '''
-        transcript = self.ac.getTranscript()
-        self.current_order = self.ac.getOrder(transcript=transcript)
-
+        # transcript = self.ac.getTranscript()
+        # self.current_order = self.ac.getOrder(transcript=transcript)
+        self.current_order = self.ac.getOrder(transcript=self.gg.get_adios())
+        
         return self.current_order
  
     def get_faceID(self):
