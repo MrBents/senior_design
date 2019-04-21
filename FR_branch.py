@@ -30,7 +30,7 @@ class FacialRecognition():
             roi_color_faces.append(frame[y:y+h, x:x+w])
         self.total_face_num = len(self.faces)
         self.color_faces = roi_color_faces
-        print("detected {} faces".format(self.total_face_num))
+        # print("detected {} faces".format(self.total_face_num))
         return roi_color_faces
 
     # TODO
