@@ -11,9 +11,11 @@ from Customer import Customer_Order
 from matplotlib import pyplot as plt
 import Audio as Audio_clean
 import google_speech as gg 
+from threading import Thread 
 
 # TODO Customer faceID check
 # TODO update the retrieval of the customer information
+# current order: 1. set order
 
 class App:
     def __init__(self, window, window_title, video_source=0, customer = None):
@@ -30,10 +32,12 @@ class App:
         self.customer_detected = customer
         self.customer_label_text = tkinter.StringVar()
         self.customer_label_text.set("customer")
-        # Current Order
-        self.current_order_text = tkinter.StringVar()
-        self.current_order_text.set("customer_current_order")
- 
+        # # Current Order
+        # self.current_order_text = tkinter.StringVar()
+        # self.current_order_text.set("customer_current_order")
+         # Current Order Transcribe
+        self.current_order_transcribe_text = tkinter.StringVar()
+        self.current_order_transcribe_text.set("customer_current_order")
         # open video source (by default this will try to open the computer webcam)
         self.vid = MyVideoCapture(self.video_source)
         # Create a canvas that can fit the above video source size
@@ -49,8 +53,8 @@ class App:
         self.customer_label.pack(anchor=tkinter.CENTER, expand=True)
 
         # Current Order Label
-        self.customer_order_label = tkinter.Label(window, textvariable = self.current_order_text)
-        self.customer_order_label.pack(anchor=tkinter.CENTER, expand=True)
+        self.customer_order_transcribe_label = tkinter.Label(window, textvariable = self.current_order_transcribe_text)
+        self.customer_order_transcribe_label.pack(anchor=tkinter.CENTER, expand=True)
 
         # After it is called once, the update method will be automatically called every delay milliseconds
         self.delay = 15 
@@ -68,11 +72,15 @@ class App:
         self.gg.record()
         # finished recording
         # send to transcibe
+        
         # get order
-        self.current_order_text.set(self.gg.get_adios())
+        self.current_order_transcribe_text.set(self.gg.get_adios())
 
         # self.get_transcribed_order()
-        print(self.get_transcribed_order())
+        temp = self.get_transcribed_order()
+        print(temp)
+        # self.current_order_text.set(str(temp))
+        self.current_order = temp 
 
 
     def get_transcribed_order(self):
