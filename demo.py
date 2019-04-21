@@ -15,7 +15,6 @@ from threading import Thread
 
 # TODO Customer faceID check
 # TODO update the retrieval of the customer information
-# current order: 1. set order
 
 class App:
     def __init__(self, window, window_title, video_source=0, customer = None):
@@ -98,7 +97,6 @@ class App:
         '''
         pass
  
-    """important"""
     def update(self):
         # Get a frame from the video source
         ret, frame = self.vid.get_frame()
