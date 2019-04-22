@@ -233,25 +233,21 @@ class Audio:
         quantities = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
         num_quantities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         QUANTITIES = ["ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN"]
-        #
-        alt_quantities = [" a ", " to "]
-        alt_quantities2 = [" the ", " too "]
-        ALT_QUANTITIES = [" ONE ", " TWO "]
-
+        
         operators = ["meal", "male", "combo"]
         OPERATORS = ["MEAL", "MEAL", "MEAL"]
 
         #preliminary translate
         translate = [" suraj a ", " suraj ", " sake ", " ship", " fry ", " grill ", " girl ", " rap ", " toe luck ", " multi green ", " multi grain ", " sun flower ", 
             " sunfire ", " flour ", " some ", " son ", " basil ", " babel ", " scrambled ", " browns ", " agon ", " to ", " too ", " ate ",
-            " for ", " a ", " an ", " the ", " has ground ", " cara reason ", " nuggets ", " strips ", " kid ", "chicken nugget", 
+            " for ", " a ", " an ", " the ", " has ground ", " cara reason ", " nuggets ", " strips ", " kid ", " chicken nugget ", 
             " ice ", "sweet iced tea ", " source ", " checking strap ", " the luck ", " com ", " Minnie", " uh ", " um ", " suite ", " no get "
-            "chicken and", "chick and", "holland asian", "sarasota"]
+            " chicken and ", " chick and ", " holland asian ", " sarasota ", " free "]
         TRANSLATE = [" sriracha ", " sriracha ", " shake ", " chip", " fries ", " grilled ", " grilled ", " wrap ", " deluxe ", " multigrain ", " multigrain ", " sunflower ", 
             " sun flower ", " flower ", " sun ", " sun ", " bagel ", " bagel ", " scramble ", " brown ", " egg and ", " 2 ", " 2 ", " 8 ",
-            " 4 ", " 1 ", " 1 ", " 1 ", " hash browns ", " carrot raisin ", " nugget ", " strip ", " kids ", "nugget", 
+            " 4 ", " 1 ", " 1 ", " 1 ", " hash browns ", " carrot raisin ", " nugget ", " strip ", " kids ", " nugget ", 
             " iced ", "sweet ", " sauce ", " chicken strip ", " deluxe ", " corn ", " mini", " ", " ", " sweet ", "nugget"
-            "chicken", "chicken", "polynesian", "sriracha"]
+            " chicken ", " chicken ", " polynesian ", " sriracha ", " 3 "]
         #takes the transcription and converts to lowercase, then converts any word of interest to an uppercase tag indicating that it is
         #important. Then erases the remaining lowercase letters
 
@@ -297,14 +293,6 @@ class Audio:
         #
         for y in range(len(num_quantities)):
             transcript = transcript.replace(num_quantities[y],QUANTITIES[y])
-        # print(transcript)
-        #
-        for y in range(len(alt_quantities)):
-            transcript = transcript.replace(alt_quantities[y],ALT_QUANTITIES[y])
-        # print(transcript)
-        #
-        for y in range(len(alt_quantities2)):
-            transcript = transcript.replace(alt_quantities2[y],ALT_QUANTITIES[y])
         # print(transcript)
         #finds the word 'to' in transcription to prevent confusion with two
         for y in range(len(operators)):
