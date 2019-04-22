@@ -109,7 +109,7 @@ class Audio:
             "milkshake", "====","====", 
             "milk shake", "====", "====", "====",
             "ice cream", "key lime", "sweet", "lemonade", 
-            "coke", "doctor pepper", "water", "====", 
+            "coca cola", "doctor pepper", "water", "====", 
             "====","chocolate milk",  "milk", "coffee", "====", 
             "====", "====", "iced tea",
             "====", "====", "====", "====",
@@ -135,7 +135,7 @@ class Audio:
             "chick-fil-a sauce", "====", "====", "====",
             "====", "barbeque", "===="]
         #
-        order_list = ["====", "====", "spicy chicken sandwich", 
+        order_list = ["chick fil one sandwich", "====", "spicy chicken sandwich", 
             "spicy deluxe sandwich", "grilled chicken sandwich", "grilled chicken club", "====", 
             "====", "grilled cool wrap", "grilled chicken nugget", "chicken biscuit", "chicken mini", 
             "egg white grill", "bacon, egg and cheese biscuit", "sausage, egg and cheese biscuit", 
@@ -240,11 +240,13 @@ class Audio:
         translate = [" suraj a ", " suraj ", " sake ", " ship", " fry ", " grill ", " girl ", " rap ", " toe luck ", " multi green ", " multi grain ", " sun flower ", 
             " sunfire ", " flour ", " some ", " son ", " basil ", " babel ", " scrambled ", " browns ", " agon ", " to ", " too ", " ate ",
             " for ", " a ", " an ", " the ", " has ground ", " cara reason ", " nuggets ", " strips ", " kid ", "chicken nugget", 
-            " ice ", "sweet iced tea ", " source ", " checking strap ", " the luck ", " com ", " Minnie"]
+            " ice ", "sweet iced tea ", " source ", " checking strap ", " the luck ", " com ", " Minnie", " uh ", " um ", " suite ", " no get "
+            "and strip"]
         TRANSLATE = [" sriracha ", " sriracha ", " shake ", " chip", " fries ", " grilled ", " grilled ", " wrap ", " deluxe ", " multigrain ", " multigrain ", " sunflower ", 
             " sun flower ", " flower ", " sun ", " sun ", " bagel ", " bagel ", " scramble ", " brown ", " egg and ", " two ", " two ", " eight ",
             " four ", " one ", " one ", " one ", " hash browns ", " carrot raisin ", " nugget ", " strip ", " kids ", "nugget", 
-            " iced ", "sweet ", " sauce ", " chicken strip ", " deluxe ", " corn ", " mini"]
+            " iced ", "sweet ", " sauce ", " chicken strip ", " deluxe ", " corn ", " mini", " ", " ", " sweet ", "nugget"
+            "strip"]
         #takes the transcription and converts to lowercase, then converts any word of interest to an uppercase tag indicating that it is
         #important. Then erases the remaining lowercase letters
 
