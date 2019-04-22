@@ -63,6 +63,7 @@ class App:
  
         self.window.mainloop()
  
+
     def record(self):
         '''
         Record Button
@@ -92,12 +93,14 @@ class App:
         
         return self.current_order
  
+
     def get_faceID(self):
         '''
         :return: faceID 
         '''
         pass
  
+
     def update(self):
         # Get a frame from the video source
         ret, frame = self.vid.get_frame()
@@ -134,6 +137,9 @@ class App:
         self.window.after(self.delay, self.update)
  
 
+    def retrieval(self):
+        return "boooooooooooo"
+
 class MyVideoCapture:
     def __init__(self, video_source=0):
         # Open the video source
@@ -165,5 +171,5 @@ if __name__ == '__main__':
 
     # Create a window and pass it to the Application object
     App(tkinter.Tk(), window_title = "CFA Counter")
-
+    # print(a.retrieval)
         

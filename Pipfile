@@ -16,6 +16,7 @@ scipy = "*"
 awscli = "*"
 speechrecognition = "*"
 pyaudio = "*"
+scikit-image = "*"
 
 [dev-packages]
 
