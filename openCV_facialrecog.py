@@ -1,16 +1,7 @@
 import cv2  # OpenCV
 import os
 import numpy as np
-
 from skimage.transform import resize
-
-
-print("testing")
-# subjects = ["", "Elvis Presley", "Freddie Mercury"]
-# subjects = ["", "Drew Teachout", "Jordan Leahey"]
-subjects = ["", "Kris", "Chase", "Zach", "Paul", "Nikhil"]
-# subjects = ["", "Kris", "Zach", "Paul", "Nikhil"]
-
 
 
 # function to detect face using OpenCV
@@ -24,7 +15,6 @@ def detect_face(img):
     face_cascade = cv2.CascadeClassifier('opencv-files/lbpcascade_frontalface_improved.xml')
     # face_cascade = cv2.CascadeClassifier('opencv-files/lbpcascade_profileface.xml')
     # face_cascade = cv2.CascadeClassifier('opencv-files/haarcascade_frontalface_default.xml')
-
 
     # detect multiscale images(some images may be closer to camera than others)
     # result is a list of faces
@@ -110,37 +100,6 @@ def prepare_training_data(data_folder_path):
     return faces, labels
 
 
-# TRAINING DATA
-print("Preparing data...")
-faces, labels = prepare_training_data(r"3.12.19_training")
-print("Data prepared")
-
-# print total faces and labels
-print("Total faces: ", len(faces))
-print("Total labels: ", len(labels))
-
-
-# create our LBPH face recognizer
-face_recognizer = cv2.face.LBPHFaceRecognizer_create()
-
-# or use EigenFaceRecognizer by replacing above line with
-'''face_recognizer = cv2.face.EigenFaceRecognizer_create()
-faces1 = []
-for x in faces:
-    faces1.append(resize(x, (100, 100), anti_aliasing=True))
-faces = faces1'''
-
-# or use FisherFaceRecognizer by replacing above line with
-'''face_recognizer = cv2.face.FisherFaceRecognizer_create()
-faces1 = []
-for x in faces:
-    faces1.append(resize(x, (100, 100), anti_aliasing=True))
-faces = faces1'''
-
-
-# train our face recognizer of our training faces
-face_recognizer.train(faces, np.array(labels))
-
 # function to draw rectangle on image
 # according to given (x, y) coordinates and
 # given width and height
@@ -179,34 +138,71 @@ def predict(test_img):
     return img
 
 
-print("Predicting images...")
+if __name__ == "__main__":
+    print("testing")
+    # subjects = ["", "Elvis Presley", "Freddie Mercury"]
+    # subjects = ["", "Drew Teachout", "Jordan Leahey"]
+    subjects = ["", "Kris", "Chase", "Zach", "Paul", "Nikhil"]
+    # subjects = ["", "Kris", "Zach", "Paul", "Nikhil"]
 
-# RECOGNIZER HAS BEEN TRAINED WITH INPUT IMAGES, NOW FOR PREDICTION
+    # TRAINING DATA
+    print("Preparing data...")
+    faces, labels = prepare_training_data(r"3.12.19_training")
+    print("Data prepared")
 
-# load test images
-test_img1 = cv2.imread("3.12.19_test/7.jpg")
-test_img2 = cv2.imread("3.12.19_test/23.jpg")
-test_img3 = cv2.imread("3.12.19_test/43.jpg")
-test_img4 = cv2.imread("3.12.19_test/49.jpg")
-test_img5 = cv2.imread("3.12.19_test/70.jpg")
+    # print total faces and labels
+    print("Total faces: ", len(faces))
+    print("Total labels: ", len(labels))
 
-# perform a prediction
-predicted_img1 = predict(test_img1)
-predicted_img2 = predict(test_img2)
-predicted_img3 = predict(test_img3)
-predicted_img4 = predict(test_img4)
-predicted_img5 = predict(test_img5)
-print("Prediction complete")
 
-# display both images
-cv2.imshow("Prediction 1", cv2.resize(predicted_img1, (400, 600)))
-cv2.waitKey(0)
-cv2.imshow("Prediction 2", cv2.resize(predicted_img2, (400, 600)))
-cv2.waitKey(0)
-cv2.imshow("Prediction 3", cv2.resize(predicted_img3, (400, 600)))
-cv2.waitKey(0)
-cv2.imshow("Prediction 4", cv2.resize(predicted_img4, (400, 600)))
-cv2.waitKey(0)
-cv2.imshow("Prediction 5", cv2.resize(predicted_img5, (400, 600)))
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+    # create our LBPH face recognizer
+    face_recognizer = cv2.face.LBPHFaceRecognizer_create()
+
+    # or use EigenFaceRecognizer by replacing above line with
+    '''face_recognizer = cv2.face.EigenFaceRecognizer_create()
+    faces1 = []
+    for x in faces:
+        faces1.append(resize(x, (100, 100), anti_aliasing=True))
+    faces = faces1'''
+
+    # or use FisherFaceRecognizer by replacing above line with
+    '''face_recognizer = cv2.face.FisherFaceRecognizer_create()
+    faces1 = []
+    for x in faces:
+        faces1.append(resize(x, (100, 100), anti_aliasing=True))
+    faces = faces1'''
+
+
+    # train our face recognizer of our training faces
+    face_recognizer.train(faces, np.array(labels))
+    print("Predicting images...")
+
+    # RECOGNIZER HAS BEEN TRAINED WITH INPUT IMAGES, NOW FOR PREDICTION
+
+    # load test images
+    test_img1 = cv2.imread("3.12.19_test/7.jpg")
+    test_img2 = cv2.imread("3.12.19_test/23.jpg")
+    test_img3 = cv2.imread("3.12.19_test/43.jpg")
+    test_img4 = cv2.imread("3.12.19_test/49.jpg")
+    test_img5 = cv2.imread("3.12.19_test/70.jpg")
+
+    # perform a prediction
+    predicted_img1 = predict(test_img1)
+    predicted_img2 = predict(test_img2)
+    predicted_img3 = predict(test_img3)
+    predicted_img4 = predict(test_img4)
+    predicted_img5 = predict(test_img5)
+    print("Prediction complete")
+
+    # display both images
+    cv2.imshow("Prediction 1", cv2.resize(predicted_img1, (400, 600)))
+    cv2.waitKey(0)
+    cv2.imshow("Prediction 2", cv2.resize(predicted_img2, (400, 600)))
+    cv2.waitKey(0)
+    cv2.imshow("Prediction 3", cv2.resize(predicted_img3, (400, 600)))
+    cv2.waitKey(0)
+    cv2.imshow("Prediction 4", cv2.resize(predicted_img4, (400, 600)))
+    cv2.waitKey(0)
+    cv2.imshow("Prediction 5", cv2.resize(predicted_img5, (400, 600)))
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
