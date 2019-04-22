@@ -340,9 +340,9 @@ class Audio:
                 last_qu = qu
                 qu = 1
             #compare word to list of all order tags and update qu to indicate most recent quantity
-            '''elif(word in QUANTITIES or word in ALT_QUANTITIES):
+            elif(word in QUANTITIES):
                 qu = QUANTITIES.index(word)+1
-                last_qu = qu'''
+                last_qu = qu
             #deals with meals
             elif(word in OPERATORS and side_output[order_index] != "===="):
                 drinks_left = drinks_left + last_qu
