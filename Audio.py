@@ -288,7 +288,7 @@ class Audio:
         # print(transcript)
         #
         for y in range(len(num_order_list)):
-            transcript = transcript.replace(number_order_list[y],orders[y])
+            transcript = transcript.replace(num_order_list[y],orders[y])
         # print(transcript)
         #replace words of interest with number tags #applied after number_order_list to avoid conflicts
         for y in range(len(quantities)):
@@ -296,7 +296,7 @@ class Audio:
         # print(transcript)
         #
         for y in range(len(num_quantities)):
-            transcript = transcript.replace(quantities[y],QUANTITIES[y])
+            transcript = transcript.replace(num_quantities[y],QUANTITIES[y])
         # print(transcript)
         #
         for y in range(len(alt_quantities)):
