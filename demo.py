@@ -170,6 +170,6 @@ class MyVideoCapture:
 if __name__ == '__main__':
 
     # Create a window and pass it to the Application object
-    a = App(tkinter.Tk(), window_title = "CFA Counter")
-    print(a.retrieval)
+    App(tkinter.Tk(), window_title = "CFA Counter")
+    # print(a.retrieval)
         
