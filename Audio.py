@@ -90,6 +90,10 @@ class Audio:
         #return value
         order = {}
 
+        num_order_list = ["number 1", "====", "====", 
+            "number 2", "number 5", "number 7", "====", 
+            "number 4", "number 8", "number 6", "===="]
+
         number_order_list = ["number one", "====", "====", 
             "number two", "number five", "number seven", "nugget", 
             "number four", "number eight", "number six", "===="]
@@ -135,7 +139,7 @@ class Audio:
             "chick-fil-a sauce", "====", "====", "====",
             "====", "barbeque", "===="]
         #
-        order_list = ["chick fil one sandwich", "====", "spicy chicken sandwich", 
+        order_list = ["chick fil 1 sandwich", "====", "spicy chicken sandwich", 
             "spicy deluxe sandwich", "grilled chicken sandwich", "grilled chicken club", "====", 
             "====", "grilled cool wrap", "grilled chicken nugget", "chicken biscuit", "chicken mini", 
             "egg white grill", "bacon, egg and cheese biscuit", "sausage, egg and cheese biscuit", 
@@ -152,7 +156,7 @@ class Audio:
             "coca-cola", "dr pepper", "bottled water", "apple juice", 
             "orange", "====", "white milk", "====", "iced coffee", 
             "gallon", "diet lemonade", "unsweet",
-            "chick fil one sauce", "polynesian", "honey mustard", "ranch",
+            "chick fil 1 sauce", "polynesian", "honey mustard", "ranch",
             "buffalo", "barbecue", "sriracha"]
         
         #tag values to replace serched values
@@ -227,6 +231,7 @@ class Audio:
 
         #quantities array
         quantities = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+        num_quantities = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         QUANTITIES = ["ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN"]
         #
         alt_quantities = [" a ", " to "]
@@ -243,8 +248,8 @@ class Audio:
             " ice ", "sweet iced tea ", " source ", " checking strap ", " the luck ", " com ", " Minnie", " uh ", " um ", " suite ", " no get "
             "chicken and", "chick and", "holland asian", "sarasota"]
         TRANSLATE = [" sriracha ", " sriracha ", " shake ", " chip", " fries ", " grilled ", " grilled ", " wrap ", " deluxe ", " multigrain ", " multigrain ", " sunflower ", 
-            " sun flower ", " flower ", " sun ", " sun ", " bagel ", " bagel ", " scramble ", " brown ", " egg and ", " two ", " two ", " eight ",
-            " four ", " one ", " one ", " one ", " hash browns ", " carrot raisin ", " nugget ", " strip ", " kids ", "nugget", 
+            " sun flower ", " flower ", " sun ", " sun ", " bagel ", " bagel ", " scramble ", " brown ", " egg and ", " 2 ", " 2 ", " 8 ",
+            " 4 ", " 1 ", " 1 ", " 1 ", " hash browns ", " carrot raisin ", " nugget ", " strip ", " kids ", "nugget", 
             " iced ", "sweet ", " sauce ", " chicken strip ", " deluxe ", " corn ", " mini", " ", " ", " sweet ", "nugget"
             "chicken", "chicken", "polynesian", "sriracha"]
         #takes the transcription and converts to lowercase, then converts any word of interest to an uppercase tag indicating that it is
@@ -281,8 +286,16 @@ class Audio:
         for y in range(len(number_order_list)):
             transcript = transcript.replace(number_order_list[y],orders[y])
         # print(transcript)
+        #
+        for y in range(len(num_order_list)):
+            transcript = transcript.replace(number_order_list[y],orders[y])
+        # print(transcript)
         #replace words of interest with number tags #applied after number_order_list to avoid conflicts
         for y in range(len(quantities)):
+            transcript = transcript.replace(quantities[y],QUANTITIES[y])
+        # print(transcript)
+        #
+        for y in range(len(num_quantities)):
             transcript = transcript.replace(quantities[y],QUANTITIES[y])
         # print(transcript)
         #
