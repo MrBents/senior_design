@@ -96,7 +96,7 @@ class Audio:
 
         #potential input values searched by program stored in parellel arrays in reverse order of processing
         third_order_list = ["sandwich", "deluxe", "spicy chicken", 
-            "spicy deluxe", "grilled chicken", "club", "number three", 
+            "====", "grilled chicken", "club", "number three", 
             "chicken strip", "wrap", "grilled nugget", "====", "mini", 
             "====", "bacon egg and cheese biscuit", "sausage egg and cheese biscuit", 
             "====", "multigrain bagel", "hash brown", "yogurt", 
@@ -115,7 +115,7 @@ class Audio:
             "====", "====", "====", "====",
             "====", "====", "===="]
         #
-        alternative_order_list = ["====", "deluxe sandwich", "spicy chicken", 
+        alternative_order_list = ["chicken sandwich", "deluxe sandwich", "spicy chicken", 
             "spicy deluxe", "grilled chicken", "club", "====", 
             "====", "wrap", "====", "====", "mini", 
             "====", "bacon egg and cheese biscuit", "sausage egg and cheese biscuit", 
