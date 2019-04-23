@@ -18,6 +18,7 @@ import time
 from time import sleep
 import multiprocessing
 import csv
+import requests
 
 # TODO Customer faceID check
 # TODO update the retrieval of the customer information
@@ -82,7 +83,7 @@ class App:
         self.gg.record()
         
         # finished recording
-        print('Adam and Eve')
+        #print('Adam and Eve')
         # get order
         self.current_order_transcribe_text.set(self.gg.get_adios())
         # self.get_transcribed_order()
@@ -99,24 +100,22 @@ class App:
         # transcript = self.ac.getTranscript()
         # self.current_order = self.ac.getOrder(transcript=transcript)
         transcript = self.gg.get_adios()
-        print(transcript)
+        #print(transcript)
         self.current_order = self.ac.getOrder(transcript=transcript)
         print(self.current_order)
-        # self.get_customer()
-        self.write_csv()
+        self.get_customer()
+        #self.write_csv()
         return self.current_order
  
 
-    def get_unordered_customer(self):
-        '''
-        :return: faceID 
-        '''
-        pass
+
 
     def parallel_request(self, x, l):
         try:
             print('before')
-            x._reference.set({u'probabilities': l})
+            # x._reference.set({u'probabilities': l})
+            # sent id,
+
             print('after')
         except Exception as e:
             print(e)
@@ -127,7 +126,7 @@ class App:
     def write_csv(self):
         filename = 'customer_order.csv'
         with open(filename, 'wb') as csv_file:
-            csv_writer = csv.writer(csv_file, deimiter=',')
+            csv_writer = csv.writer(csv_file)
             time_stamp = time.time()
             csv_writer.writerow(time_stamp)
 
@@ -138,25 +137,47 @@ class App:
         proceed accordingly
         '''
         order1 = self.current_order
-        va = 'sam'
+        r = requests.get("http://143.215.111.11:8000/giveName")
+        va = (r.json()['name'])
+        # va = 'sam'
         a_ref = self.database_ref.where(u'face_id', u'==', u'{}'.format(va)).get()
-        print('got the sam doc')
+        #print('got the sam doc')
         # print((a_ref))
         for a in a_ref:
-            print('inside loop')
+            #print('inside loop')
             abc = (a._data['probabilities'])
             # print(type(abc))
             l = []
+            httpreq = 'http://143.215.111.11:8000/changeProb?id='+va
+            ll = [item['name'] for item in abc]
+            for item in order1.keys():
+                if item not in ll:
+                    dic = {}
+                    dic['name'] = item
+                    dic['value'] = order1[item]
+                    l.append(dic)
+                    # print(type(item))
+                # print(order1[item])
+                # if item in abc
             for item in abc:
                 if item['name'] in order1.keys():
                     # print(item['name'])
+
                     # print(order1.get((item['name'])))
-                    item['value'] += order1.get((item['name']))
+                    try:
+                        item['value'] += order1.get((item['name']))
+                    except:
+                        item['value'] = int(item['value'])
+                        item['value'] += order1.get((item['name']))
                     # a._reference.update()
-                l.append(item)
+                l.append(item) 
+            for item in l:
+                httpreq += '&name='+item['name']+'&value='+ str(item['value'])
+            #print(httpreq)
             print(l)
-            a._reference.set({u'probabilities': l},merge=True)
-            print('finished setting list on db')
+            # a._reference.set({u'probabilities': l},merge=True)
+            r = requests.get(httpreq)
+            print('\nupdated db\n')
             # a = Thread(target=self.parallel_request, args=(a, l,))
             # try:
             #     a.start()
@@ -246,25 +267,26 @@ class MyVideoCapture:
             self.vid.release() 
 
 if __name__ == '__main__':
-    App(tkinter.Tk(), window_title = "CFA Counter")
-    # cred = credentials.Certificate("serviceAccountKey.json")
-    # firebase_admin.initialize_app(cred)
+    cred = credentials.Certificate("serviceAccountKey.json")
+    firebase_admin.initialize_app(cred)
 
-    # db = firestore.client()
+    db = firestore.client()
 
-    # order_list = [{'value': 50, 'name': "Chicken Sandwich"}, {'value': 25, 'name': "Deluxe Sandwich"}, {'value': 10, 'name': "Spicy Chicken Sandwich"}, {'value': 5, 'name': "Spicy Deluxe Sandwich"}, {'value': 5, 'name': "Grilled Chicken Sandwich"}, {'value': 3, 'name': "Grilled Chicken Club"}, {'value': 2, 'name': "Nuggets"}]
-    # doc_ref = db.collection(u'Customer').document(u'max')
+    """
+    order_list = [{'value': 50, 'name': "Chicken Sandwich"}, {'value': 25, 'name': "Deluxe Sandwich"}, {'value': 10, 'name': "Spicy Chicken Sandwich"}, {'value': 5, 'name': "Spicy Deluxe Sandwich"}, {'value': 5, 'name': "Grilled Chicken Sandwich"}, {'value': 3, 'name': "Grilled Chicken Club"}, {'value': 2, 'name': "Nuggets"}]
+    doc_ref = db.collection(u'Customer').document(u'max')
+    doc_ref.set({
+        u'age': 18,
+        u'ethnicity': u'white',
+        u'gender': u'female',
+        u'inLine': True,
+        u'face_id': u'max',
+        u'probabilities': order_list
+    })
+    """
 
-    # doc_ref.set({
-    #     u'age': 18,
-    #     u'ethnicity': u'white',
-    #     u'gender': u'female',
-    #     u'inLine': True,
-    #     u'face_id': u'max',
-    #     u'probabilities': order_list
-    # })
-    # cus_ref = db.collection(u'Customer')
-
+    cus_ref = db.collection(u'Customer')
+    App(tkinter.Tk(), window_title = "CFA Counter", database_ref=cus_ref)
     # Create a window and pass it to the Application object
     # print(a.retrieval)
     # print(App.retrieval())

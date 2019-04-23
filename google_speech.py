@@ -24,7 +24,7 @@ class adios:
                 # p.join()
             except Exception as e:
                 print('something timed out, ' + str(e))
-            print('somthing said')
+            #print('audio recorded')
             # write audio to a WAV file
             #with open("Recording1.wav", "wb") as f:
                 #f.write(self.audio.get_wav_data())
