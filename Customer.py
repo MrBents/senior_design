@@ -94,7 +94,8 @@ class Customer():
             for order in self.all_past_orders[-10:]:
                 top10_check += order.order_item_check_array
         ind = np.argpartition(top10_check, -10)[-10:]
-        return ind    
+        return ind
+
         
     def get_top10_all_time(self):
         ''' 
@@ -106,6 +107,7 @@ class Customer():
             top10_check += order.order_item_check_array
         ind = np.argpartition(top10_check, -10)[-10:]
         return ind
+        
     
     def __str__(self):
         # item_likelihoods = np.around(self.item_ordering_likelihood, decimals=2)
@@ -113,8 +115,8 @@ class Customer():
         # temp = None
         # for order in self.all_past_orders:
         #     temp = (order)
-        # return("faceID: {}\nCurrent Order: {}".format(self.face_id, temp))
-        return("faceID: {}\n".format(self.face_id))
+        return("faceID: {}\n".format(self.face_id, temp))
+        # return("faceID: {}\nethnicity: {}\ngender: {}\n".format(self.face_id, self.ethnicity, self.gender))
         
 
 def init_customer():

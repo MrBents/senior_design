@@ -12,12 +12,15 @@ from matplotlib import pyplot as plt
 import Audio as Audio_clean
 import google_speech as gg 
 from threading import Thread 
+import firebase_admin
+from firebase_admin import credentials, firestore
+from time import sleep
 
 # TODO Customer faceID check
 # TODO update the retrieval of the customer information
 
 class App:
-    def __init__(self, window, window_title, video_source=0, customer = None):
+    def __init__(self, window, window_title, video_source=0, customer = None, database_ref = None):
         self.window = window
         self.window.title(window_title)
         self.video_source = video_source
@@ -26,6 +29,8 @@ class App:
         self.current_order = None
         self.gg = gg.adios()
         self.ac = Audio_clean.Audio()
+        self.database_ref = database_ref
+        self.id_list = []
 
         # Customer Info
         self.customer_detected = customer
@@ -73,7 +78,7 @@ class App:
         # self.audioFile = 
         self.gg.record()
         # finished recording
-
+        print('Adam and Eve')
         # get order
         self.current_order_transcribe_text.set(self.gg.get_adios())
         # self.get_transcribed_order()
@@ -89,17 +94,64 @@ class App:
         '''
         # transcript = self.ac.getTranscript()
         # self.current_order = self.ac.getOrder(transcript=transcript)
-        self.current_order = self.ac.getOrder(transcript=self.gg.get_adios())
-        
+        transcript = self.gg.get_adios()
+        print(transcript)
+        self.current_order = self.ac.getOrder(transcript=transcript)
+        print(self.current_order)
+        self.get_customer()
         return self.current_order
  
 
-    def get_faceID(self):
+    def get_unordered_customer(self):
         '''
         :return: faceID 
         '''
         pass
- 
+
+    def parallel_request(self, x, l):
+        try:
+            print('before')
+            x._reference.update({u'probabilities': l})
+            print('after')
+        except:
+            print('after - Exc')
+            return
+
+    def get_customer(self):
+        '''
+        check for the customer in the database
+        proceed accordingly
+        '''
+        order1 = self.current_order
+        va = 'sam'
+        a_ref = self.database_ref.where(u'face_id', u'==', u'{}'.format(va)).get()
+        for a in a_ref:
+            abc = (a._data['probabilities'])
+            # print(type(abc))
+            l = []
+            for item in abc:
+                if item['name'] in order1.keys():
+                    # print(item['name'])
+                    # print(order1.get((item['name'])))
+                    item['value'] += order1.get((item['name']))
+                    # a._reference.update()
+                l.append(item)
+            print(l)
+            # a._reference.update({u'probabilities': l})
+            a = Thread(target=self.parallel_request, args=(a, l))
+            try:
+                a.start()
+            except Exception as e:
+                print(str(e))
+                a._delete()
+                continue
+            #print('lksdfhlsdkafhlkdsfhakjsdcfbfgcbajhgcfbajcgbasdf\n\n\nn\kdjfgkjdhkajsdhfkajsdfhkasjd')
+        # if face id is found in the database
+        # 1. add current order to customer
+        # if self.custome
+        # else
+        # else:
+
 
     def update(self):
         # Get a frame from the video source
@@ -119,6 +171,14 @@ class App:
                 
                 # #TODO Customer faceID check
                 # #   and update the customer, customer labels
+                # id = self.get_faceID()
+                # previously unseen customer
+                # if id not in self.id_list:
+                    # self.id_list.append(id)
+                    # retrieve customer info, with face id
+
+
+
                 # if (new): 
                 #     # create a temporary customer
                 #     self.customer_detected = Customer.Customer()
@@ -137,8 +197,6 @@ class App:
         self.window.after(self.delay, self.update)
  
 
-    def retrieval(self):
-        return "boooooooooooo"
 
 class MyVideoCapture:
     def __init__(self, video_source=0):
@@ -168,8 +226,26 @@ class MyVideoCapture:
             self.vid.release() 
 
 if __name__ == '__main__':
+    cred = credentials.Certificate("serviceAccountKey.json")
+    firebase_admin.initialize_app(cred)
+
+    db = firestore.client()
+
+    order_list = [{'value': 50, 'name': "Chicken Sandwich"}, {'value': 25, 'name': "Deluxe Sandwich"}, {'value': 10, 'name': "Spicy Chicken Sandwich"}, {'value': 5, 'name': "Spicy Deluxe Sandwich"}, {'value': 5, 'name': "Grilled Chicken Sandwich"}, {'value': 3, 'name': "Grilled Chicken Club"}, {'value': 2, 'name': "Nuggets"}]
+    doc_ref = db.collection(u'Customer').document(u'max')
+
+    doc_ref.set({
+        u'age': 18,
+        u'ethnicity': u'white',
+        u'gender': u'female',
+        u'inLine': True,
+        u'face_id': u'max',
+        u'probabilities': order_list
+    })
+    cus_ref = db.collection(u'Customer')
 
     # Create a window and pass it to the Application object
-    App(tkinter.Tk(), window_title = "CFA Counter")
+    App(tkinter.Tk(), window_title = "CFA Counter", database_ref=cus_ref)
     # print(a.retrieval)
+    # print(App.retrieval())
         
