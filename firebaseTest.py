@@ -4,6 +4,14 @@ from firebase_admin import db
 import inspect
 import Customer
 from Customer import CFA_Menu
+from time import sleep 
+
+class update_db:
+    def __init__(self):
+        self.filename = 'customer_order.csv'
+
+    def check_csv():
+        pass
 
 if __name__ == '__main__':
     cred = credentials.Certificate("serviceAccountKey.json")
@@ -30,10 +38,11 @@ if __name__ == '__main__':
     # menu = CFA_Menu.order_list
     # order1 = Customer.Customer_Order(order = {"Deluxe Sandwich": 3}, menu=menu)
     # order1 = dict(order1)
-    order1 = {"Deluxe Sandwich": 300, "Chicken Sandwich": 5}
+    order1 = {"Deluxe Sandwich": 9}
     # {'item1' : 'Chickem Nuggets'...}
     va = 'sam'
     a_ref = cus_ref.where(u'face_id', u'==', u'{}'.format(va)).get()
+
     for a in a_ref:
         # a._reference.update({u'ethnicity': u'asdfasdf'})
         abc = (a._data['probabilities'])
@@ -46,8 +55,13 @@ if __name__ == '__main__':
                 item['value'] += order1.get((item['name']))
                 # a._reference.update()
             l.append(item)
-        a._reference.update({u'probabilities': l})
+        a._reference.set({u'probabilities': l}, merge=True)
 
+    while(True):
+        if check_csv():
+            # update
+
+        sleep(5)
         
 
     # cus = cus_ref.get()

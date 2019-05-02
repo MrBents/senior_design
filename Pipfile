@@ -9,17 +9,6 @@ numpy = "*"
 opencv-python = "*"
 urllib2 = "*"
 urllib3 = "*"
-pillow = "*"
-pandas = "*"
-matplotlib = "*"
-boto3 = "*"
-firebase-admin = "*"
-scipy = "*"
-awscli = "*"
-speechrecognition = "*"
-pyaudio = "*"
-scikit-image = "*"
-
 
 [dev-packages]
 pylint = "<2.0.0"

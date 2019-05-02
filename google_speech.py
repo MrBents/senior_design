@@ -1,18 +1,30 @@
 import speech_recognition as sr 
 import Audio
-import timeout_decorator
+import multiprocessing
 
 class adios:
     def __init__(self):
         self.rek = sr.Recognizer()
         self.audio = ""
+        #self.pool = multiprocessing.Pool(1)
+        # self.pool.apply_async(self.record())
 
-    @timeout_decorator.timeout(4)
+   
+
     def record(self):
+        #pool = multiprocessing.Pool(1)
+        
         with sr.Microphone() as source:
             print('say Something')
-            self.audio = self.rek.listen(source)
-            print('somthing said')
+            try:
+                # p = multiprocessing.Process(target=self.rek.listen, args=(source,))
+                #res = pool.apply_async(self.rek.listen, [source])
+                self.audio = self.rek.listen(source,timeout=0, phrase_time_limit=5)
+                # p.start()
+                # p.join()
+            except Exception as e:
+                print('something timed out, ' + str(e))
+            #print('audio recorded')
             # write audio to a WAV file
             #with open("Recording1.wav", "wb") as f:
                 #f.write(self.audio.get_wav_data())
