@@ -11,7 +11,7 @@
     "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5.0.1",
     "react-scroll-horizontal": "^1.6.2",
     "react-scrollbar": "^0.5.4"
   },
